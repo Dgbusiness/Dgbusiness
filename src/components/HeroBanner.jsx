@@ -2,8 +2,9 @@ import React from 'react'
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import { Box } from "@mui/material";
-
+import { Box, Grid, Typography } from "@mui/material";
+import { options } from '../utils/ParticlesOptions.jsx';
+import Carousel from 'react-material-ui-carousel'
 
 const HeroBanner = () => {
     const particlesInit = useCallback(async (engine) => {
@@ -17,102 +18,116 @@ const HeroBanner = () => {
     const particlesLoaded = useCallback(async (container) => {
         //await console.log(container);
     }, []);
-    return (
-        <Box 
-            className="heroBanner container" 
-            sx={{
-                height: { xs: "100vh", sm: "110vh", md: "100vh" },
-                bgcolor: "black",
-                color: 'white',
-                display: 'flex',
 
-            }}
-        >
+    const skills = [
+        {id: 0, value: "Web"},
+        {id: 1, value: "Mobile"},
+        {id: 2, value: "Videogame"},
+    ]
+
+    return (
+        <Box id="back-to-top-anchor">
             <Particles 
                 id="tsparticles"
                 init={particlesInit} 
                 loaded={particlesLoaded} 
-
-                options={
-                    {
-                        background: {
-                            color: {
-                                value: "#000000",
-                            },
-                        },
-                        fpsLimit: 120,
-                        interactivity: {
-                            events: {
-                                onClick: {
-                                    enable: true,
-                                    mode: "push",
-                                },
-                                onHover: {
-                                    enable: true,
-                                    mode: "grab",
-                                },
-                                resize: true,
-                            },
-                            modes: {
-                                push: {
-                                    quantity: 4,
-                                },
-                                grab: {
-                                    quantity: 12,
-                                },
-                            },
-                        },
-                        particles: {
-                            color: {
-                                value: "#ffffff",
-                            },
-                            links: {
-                                color: "#ffffff",
-                                distance: 150,
-                                enable: true,
-                                opacity: 0.5,
-                                width: 1,
-                            },
-                            collisions: {
-                                enable: true,
-                            },
-                            move: {
-                                directions: "none",
-                                enable: true,
-                                outModes: {
-                                    default: "bounce",
-                                },
-                                random: true,
-                                speed: 3,
-                                straight: false,
-                            },
-                            number: {
-                                density: {
-                                    enable: true,
-                                    area: 800,
-                                },
-                                value: 80,
-                            },
-                            opacity: {
-                                value: 0.5,
-                            },
-                            shape: {
-                                type: "character",
-                                character: {
-                                    "value": "DG", // the text to use as particles, any string is valid, for escaping unicode char use the `\uXXXX` syntax
-                                    "font": "Verdana", // the font to use to draw the text. If the font needs an external css or javascript like FontAwesome you should include all the necessary files on your own
-                                    "style": "", // any additional css style to add to the text
-                                    "weight": "" // the css weight property, some fonts like font awesome have a specified weight, check the documentation if needed
-                                } 
-                            },
-                            size: {
-                                value: { min: 1, max: 10 },
-                            },
-                        },
-                        detectRetina: true,
-                    }
-                }
+                options={options}
             />
+            <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                    height: { xs: "100vh", sm: "110vh", md: "100vh" },
+                    background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
+                    color: 'white',
+                    pl: "2rem"
+                }}
+            >
+                <Grid
+                    item={true}
+                    xs={12}
+                    md={6}
+                    sx={{
+                        textAlign: { xs:"center", sm:"center", md:"left"},
+                        marginTop: { xs: 15, sm: 20, md: 0 },
+                    }}
+                >
+                    <Typography 
+                        variant="h2"
+                        color="white"
+                        fontWeight={550}
+                        fontFamily="Alkalami"
+                        data-aos="fade"
+                        data-aos-duration="3000">
+                        Hi, I'm Daniel Giannotti
+                    </Typography>
+                    <Typography 
+                        variant="h2"
+                        color="#a80c06"
+                        fontWeight="bold"
+                        fontSize={150}
+                        fontFamily="Alkalami"
+                        letterSpacing=".1rem"
+                        data-aos="fade"
+                        data-aos-duration="3000"
+                    >
+                        <Carousel 
+                            animation="fade" 
+                            indicators={0} 
+                            interval={2500} 
+                            duration={500} 
+                            navButtonsAlwaysInvisible={1}
+                            sx={{
+                                overflow: "visible !important", 
+                                lineHeight: .5,
+                                mt: "5vh"
+                            }}
+                            axys="y">
+                            {
+                                skills.map( (item, i) => 
+                                    item.value  
+                                )
+                            } 
+                        </Carousel> Developer
+                    </Typography>
+                    <Typography 
+                        variant="h2"
+                        color="white"
+                        fontWeight={550}
+                        fontFamily="Alkalami"
+                        data-aos="fade"
+                        sx={{
+                            lineHeight: 0,
+                        }}
+                        data-aos-duration="3000">
+                        Based in Venezuela.
+                    </Typography>
+
+                </Grid>
+                <Grid
+                    item={true}
+                    xs={12}
+                    md={6}
+                    sx={{
+                        textAlign: "center",
+                        marginTop: { xs: 15, sm: 20, md: 0 },
+                    }}
+                >
+
+                    <Box
+                        component="img"
+                        src={`https://www.giantbomb.com/a/uploads/original/5/56742/3061198-arthur%20portrait%20transparent.png`}
+                        alt="cgianns"
+                        sx={{
+                            height: { xs: 250, sm: 300, md: 350, lg: "100vh" },
+                            marginBottom: { xs: 15, md: 0 },
+                        }}
+                        className="mouse-wheel2"
+                    />
+
+                </Grid>
+            </Grid>
         </Box>
     )
 }
