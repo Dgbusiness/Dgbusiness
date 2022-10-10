@@ -27,23 +27,23 @@ const HeroBanner = () => {
 
     return (
         <Box id="back-to-top-anchor">
-            <Particles 
-                id="tsparticles"
-                init={particlesInit} 
-                loaded={particlesLoaded} 
-                options={options}
-            />
             <Grid
                 container
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    height: { xs: "100vh", sm: "110vh", md: "100vh" },
+                    height: { xs: "100vh", sm: "110vh", md: "110vh" },
                     background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
                     color: 'white',
                     pl: "2rem"
                 }}
             >
+                <Particles 
+                    id="tsparticles"
+                    init={particlesInit} 
+                    loaded={particlesLoaded} 
+                    options={options}
+                />
                 <Grid
                     item={true}
                     xs={12}

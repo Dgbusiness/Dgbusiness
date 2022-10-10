@@ -39,7 +39,7 @@ export const options = {
             "width":1
         },
         "collisions":{
-            "enable":true
+            "enable":false
         },
         "move":{
             "directions":"none",
@@ -77,5 +77,8 @@ export const options = {
             }
         }
     },
-    "detectRetina":true
+    "detectRetina":true,
+    "fullScreen": { 
+        "enable": false,
+    },
 }

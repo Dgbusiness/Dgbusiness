@@ -1,4 +1,3 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,12 +8,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import {useState} from 'react';
 
 
-const pages = ['About', 'Skills & Studies', 'Portfolio', 'Companies', 'Contact'];
+const pages = [
+    {id: 'about', value:'About'}, 
+    {id: 'skills-and-studies', value:'Skills & Studies'}, 
+    {id: 'portfolio', value:'Portfolio'}, 
+    {id: 'companies', value:'Companies'}, 
+    {id: 'contact', value:'Contact'}
+]
 
 const Navbar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [changeBG, setChangeBG] = useState(false);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -24,14 +31,42 @@ const Navbar = () => {
         setAnchorElNav(null);
     };
 
+    const handlePageSeleted = (event, id) => {
+        const anchor = (event.target.ownerDocument || document).querySelector(
+            `#${id}`,
+        );
+
+        if (anchor) {
+            anchor.scrollIntoView({
+                block: 'center',
+            });
+        }
+    };
+
+    /**
+     * If the window is scrolled down 80px, change the background color. If the window is
+     * scrolled up 80px, change the background color to transparent.
+     */
+    const changeBackground = () => {
+        if (window.scrollY >= 80) {
+            setChangeBG(true);
+        } else {
+            setChangeBG(false);
+        }
+    };
+
+    /* Listening for the scroll event and calling the `changeBackground` function. */
+    window.addEventListener("scroll", changeBackground);
 
     return (
         <AppBar 
             position="fixed" 
             sx={{ 
-                background: "rgba(0,0,0,0)",
-                boxShadow: "none",
-                py: 1
+                background: changeBG
+                    ? `rgba(0,0,0,.8)`
+                    : "transparent",
+                boxShadow: changeBG ? "" : "none",
+                pt: 1
             }}>
             <Container maxWidth="100vw">
                 <Toolbar disableGutters>
@@ -83,10 +118,10 @@ const Navbar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{ 
+                                <MenuItem key={page.id} sx={{ 
 
                                 }}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center" onClick={handlePageSeleted}>{page.value}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -116,7 +151,7 @@ const Navbar = () => {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={(e) => handlePageSeleted(e, page.id)}
                                 sx={{ my: 2, color: 'white', display: 'block',
                                     "&:hover": { 
                                         fontWeight: "bold",
@@ -125,7 +160,7 @@ const Navbar = () => {
                                     }, 
                                 }}
                             >
-                                {page}
+                                {page.value}
                             </Button>
                         ))}
                     </Box>
