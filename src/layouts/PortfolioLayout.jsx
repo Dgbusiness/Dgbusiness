@@ -4,7 +4,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import Skills from '../components/Skills.jsx'
-import Title from '../components/Title.jsx'
 
 const AboutLayout = () => {
 
@@ -29,7 +28,14 @@ const AboutLayout = () => {
                     pt: '2vh'
                 }}
             >
-                <Title title='About' />
+                <Typography 
+                    sx={{ width: '100%' }}
+                    variant="h2"
+                    color="white"
+                    fontWeight={550}
+                    fontFamily="Alkalami">
+                    About 
+                </Typography>
                 <Grid
                     item
                     xs={12}
