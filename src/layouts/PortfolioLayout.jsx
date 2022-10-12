@@ -1,139 +1,125 @@
 import {useState} from 'react';
-import { Box, Grid, Typography, Tabs, Tab } from "@mui/material";
-import SchoolIcon from '@mui/icons-material/School';
-import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import Skills from '../components/Skills.jsx'
+import { Box, Typography, Card, CardMedia, CardContent, CardActions, Button, Divider } from "@mui/material";
+import Title from '../components/Title.jsx'
+import { services } from '../utils/ServicesList.jsx'
 
-const AboutLayout = () => {
+const PortfolioLayout = () => {
 
-    const [tabIndex, setTabIndex] = useState(0);
+    const [hover, setHover] = useState(false)
+    const [cardSelected, setCardSelected] = useState(null)
 
-    const handleChange = (event, newValue) => {
-        setTabIndex(newValue);
-    };
+    const handleOnHover = (index) => {
+        setCardSelected(index)
+        setHover(true)
+    }
+    const handleOutHover = () => {
+        setCardSelected(null)
+        setHover(false)
+    }
+
 
     return (
-        <Box >
-            <Grid
-                container
-                spacing={2}
-                justifyContent="center"
-                alignItems="center"
-                sx={{
-                    height: { xs: "100vh", sm: "110vh", md: "100vh" },
-                    background: `rgba(50,50,50,1)`,
-                    color: 'white',
-                    textAlign: 'center',
-                    pt: '2vh'
-                }}
-            >
-                <Typography 
-                    sx={{ width: '100%' }}
-                    variant="h2"
-                    color="white"
-                    fontWeight={550}
-                    fontFamily="Alkalami">
-                    About 
-                </Typography>
-                <Grid
-                    item
-                    xs={12}
-                    md={2}
+        <Box 
+            id='portfolio' 
+            display='flex'
+            sx={{
+                bgcolor: 'gray',
+                height: { xs: "100vh", sm: "110vh", md: "100vh" },
+                color: 'white',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                textAlign: 'center'
+            }}>
+            <Title title='Portfolio' />
+            { services.map( (service, index) => 
+            <Box 
+                onMouseOver={() => handleOnHover(index)}
+                onMouseOut={handleOutHover}>
+                <Card 
                     sx={{
-                        textAlign: { xs:"center", sm:"center", md:"right"},
-                        marginTop: { xs: 15, sm: 20, md: 0 },
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}
-                >
-                    <Box
+                        transition: "transform 0.5s ease-in-out",
+                        transform: (hover && cardSelected === index) ? "scale3d(1.5, 1.5, 1) rotateY(180deg)" : "0",
+                        maxWidth: 400, 
+                        height: 350,
+                        borderRadius: 10, 
+                        m: 5, 
+                        position: "relative",
+                        zIndex: (hover && cardSelected === index) ? 100 : 0,
+                        boxShadow: (hover && cardSelected === index) ? "5px 5px 5px #a80c06" : 3}}>
+                    <CardMedia
                         component="img"
-                        src={`https://www.giantbomb.com/a/uploads/original/5/56742/3061198-arthur%20portrait%20transparent.png`}
-                        alt="cgianns"
+                        height={(hover && cardSelected === index) ? "50%": "100%"}
+                        image={service.img}
+                        alt={service.alt}
                         sx={{
-                            height: { xs: 100, sm: 150, md: 200 },
-                            width: { xs: 100, sm: 150, md: 200 },
-                            marginBottom: { xs: 15, md: 0 },
-                            borderRadius: "100%",
-                            background: "black"
+                            transition: "height 0.5s ease-in-out,filter 0.5s ease-in-out ", 
+                            transform: (hover && cardSelected === index) ? "scale3d(1.05, 1.05, 1)" : "0",
+                            filter: (hover && cardSelected === index) ? "none" : "blur(3px)"
                         }}
-                        className="mouse-wheel2"
                     />
-                </Grid>
-                <Grid
-                    id="about"
-                    item
-                    xs={12}
-                    md={4}
-                    sx={{
-                        textAlign: { xs:"center", sm:"center", md:"justify"},
-                        marginTop: { xs: 15, sm: 20, md: 0 },
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}
-                >
-                    <Typography 
-                        color="white"
-                        fontFamily="sans-serif"
-                        data-aos="fade"
-                        data-aos-duration="3000">
-                        Since the beginning of my work experience more than 4 years ago I have had the opportunity to work remotely with several national and international companies as a Full Stack Web Developer. I am always innovating my knowledge since there are many areas that I am passionate about, very responsible, punctual and looking for new professional challenges to complete. 
-                    </Typography>
-                </Grid>
-                <Box
-                    display='flex'
-                    xs={12}
-                    md={12}
-                    sx={{
-                        textAlign: { xs:"center", sm:"center", md:"center"},
-                        marginTop: { xs: 15, sm: 20, md: 0 },
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexWrap: 'wrap',
-                        flexDirection: 'column'
-                    }}
-                >
-                    <Tabs 
-                        id='skills-and-studies'
-                        centered
-                        value={tabIndex} 
-                        onChange={handleChange} 
-                        textColor="white"
-                        TabIndicatorProps={{style: {background:'#a80c06'}}}>
-                        <Tab 
-                            icon={<LaptopChromebookIcon />} 
-                            label="SKILLS"
-                            sx={{
-                                color: "white",
-                            }}/>
-                        <Tab icon={<SchoolIcon />} label="STUDIES" />
-                        <Tab icon={<WorkspacePremiumIcon />} label="CERTIFICATES" />
-                    </Tabs>
-                    <Box sx={{ 
-                        padding: 2, 
-                        height:{ xs: '50', sm: '50vh', md: '50vh' }, 
-                        width:{ xs: '100vw', sm: '100vw', md: '50vw' }, 
-                        flexDirection: 'row', 
-                        flexWrap: 'wrap', 
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }} display="flex" gap={6}>
-                        {tabIndex === 0 && (<Skills />)}
-                        {tabIndex === 1 && (
-                            <Box>
-                                <Typography>The second tab</Typography>
-                            </Box>
+                    <CardContent 
+                        sx={{
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                            fontFamily:"Alkalami",
+                        }}>
+                        {!(hover && cardSelected === index) && (
+                            <>
+                                <Typography variant="h6" component="div"
+                                    sx={{
+                                        position: 'absolute',
+                                        top: "35%",
+                                        right: 0,
+                                        left: 0,
+                                        m: 'auto',
+                                        px: 5,
+                                        color: 'white',
+                                    }}
+                                >
+                                    {service.name}
+                                    <Divider sx={{ bgcolor: 'white', border: .5, mt: 1 }}/>
+                                </Typography>
+                                <Typography variant="h4" component="div"
+                                    sx={{
+                                        position: 'absolute',
+                                        top: "50%",
+                                        right: 0,
+                                        left: 0,
+                                        m: 'auto',
+                                        px: 5,
+                                        color: 'white',
+                                        textShadow: '2.5px 2.5px 2.5px black'
+                                    }}>
+                                    {service.name}
+                                </Typography>
+                            </>
                         )}
-                        {tabIndex === 2 && (
-                            <Box>
-                                <Typography>The third tab</Typography>
-                            </Box>
+                        {(hover && cardSelected === index) && (
+                            <Typography 
+                                variant="h6"
+                                sx={{
+                                    transform: "rotateY(-180deg)"
+                                }}
+                            >
+                                {service.name}
+                                {service.description}
+                            </Typography>
                         )}
-                    </Box> 
-                </Box>
-            </Grid>
+                    </CardContent>
+                    <CardActions
+                        sx={{
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transform: "rotateY(-180deg)"
+                        }}>
+                        <Button size="small">View Site</Button>
+                    </CardActions>
+                </Card> 
+            </Box>
+            )}
         </Box>   
     )
 }
-export default AboutLayout
+export default PortfolioLayout

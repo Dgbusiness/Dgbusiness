@@ -1,7 +1,4 @@
-import { Box, Typography } from "@mui/material";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import {useState} from "react";
 import { services } from '../utils/ServicesList.jsx'
 import Title from '../components/Title.jsx'
