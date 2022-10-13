@@ -23,12 +23,12 @@ const ServicesLayout = () => {
             display='flex'
             sx={{
                 bgcolor: 'black',
-                height: { xs: "100vh", sm: "110vh", md: "100vh" },
                 color: 'white',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                textAlign: 'center'
+                textAlign: 'center',
+                py: 5
             }}>
             <Title title='Services' />
             { services.map( (service, index) => 
@@ -42,6 +42,7 @@ const ServicesLayout = () => {
                     height: 500,
                     borderRadius: 10, 
                     m: 5, 
+                    cursor: 'pointer',
                     boxShadow: (hover && cardSelected === index) ? "5px 5px 5px #a80c06" : 3}}>
                 <CardMedia
                     component="img"

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CardActions, Button, Divider } from "@mui/material";
 import Title from '../components/Title.jsx'
-import { services } from '../utils/ServicesList.jsx'
+import { projects } from '../utils/ProjectsList'
 
 const PortfolioLayout = () => {
 
@@ -17,6 +17,9 @@ const PortfolioLayout = () => {
         setHover(false)
     }
 
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <Box 
@@ -24,37 +27,42 @@ const PortfolioLayout = () => {
             display='flex'
             sx={{
                 bgcolor: 'gray',
-                height: { xs: "100vh", sm: "110vh", md: "100vh" },
+                height: 'auto',
+                minHeight: { xs: "100vh", sm: "110vh", md: "80vh" },
                 color: 'white',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                textAlign: 'center'
+                textAlign: 'center',
+                py: 5
             }}>
-            <Title title='Portfolio' />
-            { services.map( (service, index) => 
+            <Title title='Portfolio' subtitle='These are some of the projects I have been working on recently.'/>
+            { projects.map( (project, index) => 
             <Box 
+                key={index}
                 onMouseOver={() => handleOnHover(index)}
                 onMouseOut={handleOutHover}>
                 <Card 
                     sx={{
                         transition: "transform 0.5s ease-in-out",
                         transform: (hover && cardSelected === index) ? "scale3d(1.5, 1.5, 1) rotateY(180deg)" : "0",
-                        maxWidth: 400, 
-                        height: 350,
+                        width: 400,
+                        maxWidth: {xs: '100%', sm: '50vw', md: '25vw'}, 
+                        height: {xs: 300, sm: 300, md: 350},
                         borderRadius: 10, 
                         m: 5, 
                         position: "relative",
+                        cursor: 'pointer',
                         zIndex: (hover && cardSelected === index) ? 100 : 0,
                         boxShadow: (hover && cardSelected === index) ? "5px 5px 5px #a80c06" : 3}}>
                     <CardMedia
                         component="img"
-                        height={(hover && cardSelected === index) ? "50%": "100%"}
-                        image={service.img}
-                        alt={service.alt}
+                        height={(hover && cardSelected === index) ? "60%": "100%"}
+                        image={project.img}
+                        alt={project.name}
                         sx={{
                             transition: "height 0.5s ease-in-out,filter 0.5s ease-in-out ", 
-                            transform: (hover && cardSelected === index) ? "scale3d(1.05, 1.05, 1)" : "0",
+                            transform: (hover && cardSelected === index) ? "scale3d(1.05, 1.05, 1) rotateY(180deg)" : "rotateY(-180deg)",
                             filter: (hover && cardSelected === index) ? "none" : "blur(3px)"
                         }}
                     />
@@ -78,7 +86,7 @@ const PortfolioLayout = () => {
                                         color: 'white',
                                     }}
                                 >
-                                    {service.name}
+                                    {project.topTools}
                                     <Divider sx={{ bgcolor: 'white', border: .5, mt: 1 }}/>
                                 </Typography>
                                 <Typography variant="h4" component="div"
@@ -92,19 +100,26 @@ const PortfolioLayout = () => {
                                         color: 'white',
                                         textShadow: '2.5px 2.5px 2.5px black'
                                     }}>
-                                    {service.name}
+                                    {project.name}
                                 </Typography>
                             </>
                         )}
                         {(hover && cardSelected === index) && (
                             <Typography 
-                                variant="h6"
+                                variant="body2"
                                 sx={{
-                                    transform: "rotateY(-180deg)"
+                                    textAlign: 'justify',
+                                    fontWeight: '28px',
+                                    transform: "rotateY(-180deg)",
+                                    fontFamily:"Roboto",
                                 }}
                             >
-                                {service.name}
-                                {service.description}
+                                Project Name: {project.name}
+                                <Divider/>
+                                Software type: {project.type}
+                                <Divider/>
+                                Tools used: {project.tools}
+                                <Divider/>
                             </Typography>
                         )}
                     </CardContent>
@@ -114,7 +129,7 @@ const PortfolioLayout = () => {
                             justifyContent: 'center',
                             transform: "rotateY(-180deg)"
                         }}>
-                        <Button size="small">View Site</Button>
+                        <Button onClick={() => openInNewTab(project.url)} size="small">View Site</Button>
                     </CardActions>
                 </Card> 
             </Box>

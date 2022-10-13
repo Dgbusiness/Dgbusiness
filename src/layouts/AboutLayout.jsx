@@ -22,11 +22,10 @@ const AboutLayout = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    height: { xs: "100vh", sm: "110vh", md: "100vh" },
                     background: `rgba(50,50,50,1)`,
                     color: 'white',
                     textAlign: 'center',
-                    pt: '2vh'
+                    py: 5 
                 }}
             >
                 <Title title='About' />
