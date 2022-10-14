@@ -86,6 +86,7 @@ const CompaniesLayout = () => {
                     }}
                 >
                     <Carousel 
+                        indicators={true}
                         animation="slide" 
                         interval={2500} 
                         duration={500} 
@@ -97,12 +98,13 @@ const CompaniesLayout = () => {
                         }} 
                         indicatorIconButtonProps={{
                             style: {
-                                marginTop: '20vh',    // 1
+                                zIndex: -10
                             }
                         }}
-                        axys="y">
+                        sx={{
+                        }}>
                         {
-                            Item([...companies], 6) 
+                            Item([...companies], 2) 
                         } 
                     </Carousel>
                 </Grid>
