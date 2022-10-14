@@ -13,7 +13,7 @@ const Title = ({ title, subtitle }) => {
             </Typography>
             {subtitle && (
                 <Typography 
-                    sx={{ lineHeight:0, width: '100%', pb: 5 }}
+                    sx={{ lineHeight:0, width: '100%', pt: 5 }}
                     variant="h4"
                     color="white"
                     fontFamily="Roboto">

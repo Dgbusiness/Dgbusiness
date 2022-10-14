@@ -4,6 +4,7 @@ import AboutLayout from "./layouts/AboutLayout";
 import ServicesLayout from "./layouts/ServicesLayout";
 import PortfolioLayout from "./layouts/PortfolioLayout";
 import CompaniesLayout from "./layouts/CompaniesLayout";
+import ContactLayout from "./layouts/ContactLayout";
 
 const App = () => (
     <>
@@ -12,6 +13,7 @@ const App = () => (
         <ServicesLayout />
         <PortfolioLayout />
         <CompaniesLayout />
+        <ContactLayout />
     </>
 )
 

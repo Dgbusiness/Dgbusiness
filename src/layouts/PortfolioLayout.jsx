@@ -88,10 +88,18 @@ const PortfolioLayout = () => {
                                         m: 'auto',
                                         px: 5,
                                         color: 'white',
+                                        textShadow: '2.5px 2.5px 2.5px black'
                                     }}
                                 >
                                     {project.topTools}
-                                    <Divider sx={{ bgcolor: 'white', border: .5, mt: 1 }}/>
+                                <Divider 
+                                    sx={{ 
+                                        bgcolor: 'white', 
+                                        border: .5, 
+                                        textShadow: '2.5px 2.5px 2.5px black',
+                                        mt: 1 
+                                    }}
+                                />
                                 </Typography>
                                 <Typography variant="h4" component="div"
                                     sx={{
