@@ -41,6 +41,9 @@ const PortfolioLayout = () => {
             <Box 
                 key={index}
                 onMouseOver={() => handleOnHover(index)}
+                sx={{ 
+                    m: (hover && cardSelected === index) ? 5 : 0,
+                }}
                 onMouseOut={handleOutHover}>
                 <Card 
                     sx={{
@@ -50,6 +53,7 @@ const PortfolioLayout = () => {
                         maxWidth: {xs: '100%', sm: '50vw', md: '25vw'}, 
                         height: {xs: 300, sm: 300, md: 350},
                         borderRadius: 10, 
+                        m: (hover && cardSelected === index) ? 10 : 5,
                         m: 5, 
                         position: "relative",
                         cursor: 'pointer',
