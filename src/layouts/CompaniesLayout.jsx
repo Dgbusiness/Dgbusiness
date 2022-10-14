@@ -6,16 +6,8 @@ import Carousel from 'react-material-ui-carousel'
 
 const CompaniesLayout = () => {
 
-    const [hover, setHover] = useState(false)
-    const [cardSelected, setCardSelected] = useState(null)
-
-    const handleOnHover = (index) => {
-        setCardSelected(index)
-        setHover(true)
-    }
-    const handleOutHover = () => {
-        setCardSelected(null)
-        setHover(false)
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
     }
 
     const splitToChunks = (array, parts) => {
@@ -43,6 +35,7 @@ const CompaniesLayout = () => {
                 {
                     item.map(element => (
                         <Box
+                            onClick={() => openInNewTab(element.url)}
                             component="img"
                             src={element.img}
                             alt="cgianns"
