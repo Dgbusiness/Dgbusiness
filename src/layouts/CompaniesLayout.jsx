@@ -31,6 +31,7 @@ const CompaniesLayout = () => {
                 gap: 2,
                 justifyContent: 'center',
                 alignItems: 'center',
+                height: 180
             }} >
                 {
                     item.map(element => (
@@ -104,7 +105,7 @@ const CompaniesLayout = () => {
                         sx={{
                         }}>
                         {
-                            Item([...companies], 2) 
+                            Item([...companies], 6) 
                         } 
                     </Carousel>
                 </Grid>
