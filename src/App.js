@@ -5,6 +5,7 @@ import ServicesLayout from "./layouts/ServicesLayout";
 import PortfolioLayout from "./layouts/PortfolioLayout";
 import CompaniesLayout from "./layouts/CompaniesLayout";
 import ContactLayout from "./layouts/ContactLayout";
+import Footer from "./components/Footer";
 
 const App = () => (
     <>
@@ -14,6 +15,7 @@ const App = () => (
         <PortfolioLayout />
         <CompaniesLayout />
         <ContactLayout />
+        <Footer />
     </>
 )
 

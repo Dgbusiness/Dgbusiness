@@ -25,8 +25,8 @@ const CompaniesLayout = () => {
 
         let dataChunks = splitToChunks(data, qty)
 
-        let result = dataChunks.map(item => (
-            <Box sx={{
+        let result = dataChunks.map((item, index) => (
+            <Box key={(JSON.stringify(item).trim())} sx={{
                 display: 'flex',
                 gap: 2,
                 justifyContent: 'center',
@@ -34,8 +34,9 @@ const CompaniesLayout = () => {
                 height: 180
             }} >
                 {
-                    item.map(element => (
+                    item.map((element, index) => (
                         <Box
+                            key={(element.name + index).trim()}
                             onClick={() => openInNewTab(element.url)}
                             component="img"
                             src={element.img}

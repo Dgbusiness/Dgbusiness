@@ -92,7 +92,6 @@ const AboutLayout = () => {
                         centered
                         value={tabIndex} 
                         onChange={handleChange} 
-                        textColor="white"
                         TabIndicatorProps={{style: {background:'#a80c06'}}}>
                         <Tab 
                             icon={<LaptopChromebookIcon />} 

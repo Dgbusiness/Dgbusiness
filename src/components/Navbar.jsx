@@ -119,7 +119,7 @@ const Navbar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.id} sx={{ 
+                                <MenuItem key={page.value+page.id} sx={{ 
 
                                 }}>
                                     <Typography textAlign="center" onClick={handlePageSeleted}>{page.value}</Typography>
@@ -151,7 +151,7 @@ const Navbar = () => {
                     }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.id}
                                 onClick={(e) => handlePageSeleted(e, page.id)}
                                 sx={{ my: 2, color: 'white', display: 'block',
                                     "&:hover": { 

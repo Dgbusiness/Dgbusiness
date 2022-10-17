@@ -33,6 +33,7 @@ const ServicesLayout = () => {
             <Title title='Services' />
             { services.map( (service, index) => 
             <Card 
+                key={service.alt+index}
                 onMouseOver={() => handleOnHover(index)}
                 onMouseOut={handleOutHover} 
                 sx={{

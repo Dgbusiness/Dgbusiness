@@ -3,8 +3,9 @@ import { skills } from '../utils/SkillList.jsx'
 
 const Skills = () => {
 
-    const SkillsComponent = skills.map(skill => (
+    const SkillsComponent = skills.map((skill, index) => (
         <Box
+            key={(skill.name+index).trim()}
             component="img"
             src={skill.img}
             alt={skill.name}
