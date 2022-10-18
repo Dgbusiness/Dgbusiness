@@ -26,44 +26,45 @@ const StyledTextField = withStyles({
     },
 })(TextField);
 
-/*Initial values (Formik)*/
-const initialValues = {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-}
-
-/*Validation schema with Yup (Formik)*/
-const validationSchema = yup.object({
-    name: yup
-    .string()
-    .required('Required')
-    .min(3, 'Name must be greater than 3 characters.')
-    .max(15, 'Name must be lower than 15 characters.'),
-    email: yup
-    .string()
-    .email('Invalid email address.')
-    .required('Required'),
-    subject: yup
-    .string()
-    .required('Required')
-    .min(5, 'Subject must be greater than 5 characters.')
-    .max(50, 'Subject must be lower than 50 characters.'),
-    message: yup
-    .string()
-    .required('Required')
-    .min(10, 'Message must be greater than 10 characters.')
-    .max(1000, 'Message must be lower than 1000 characters.'),
-})
-
-/*onSubmit function (Formik)*/
-const onSubmit = values => {
-    console.log('entro')
-    alert(JSON.stringify(values, null, 2));
-} 
 
 const ContactLayout = () => {
+    
+    /*Initial values (Formik)*/
+    const initialValues = {
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    }
+
+    /*Validation schema with Yup (Formik)*/
+    const validationSchema = yup.object({
+        name: yup
+        .string()
+        .required('Required')
+        .min(3, 'Name must be greater than 3 characters.')
+        .max(15, 'Name must be lower than 15 characters.'),
+        email: yup
+        .string()
+        .required('Required')
+        .email('Invalid email address.'),
+        subject: yup
+        .string()
+        .required('Required')
+        .min(5, 'Subject must be greater than 5 characters.')
+        .max(50, 'Subject must be lower than 50 characters.'),
+        message: yup
+        .string()
+        .required('Required')
+        .min(10, 'Message must be greater than 10 characters.')
+        .max(1000, 'Message must be lower than 1000 characters.'),
+    })
+
+    /*onSubmit function (Formik)*/
+    const onSubmit = values => {
+        console.log('entro')
+        alert(JSON.stringify(values, null, 2));
+    } 
 
     const formik = useFormik({
         initialValues,
@@ -89,8 +90,6 @@ const ContactLayout = () => {
             <Title title='Contact me' subtitle='I am available for full time, part time and freelance work. Connect with me via email: dgbusiness26@gmail.com'/>
             <form onSubmit={formik.handleSubmit}>
                 <StyledTextField
-                    required
-                    id='name'
                     name='name'
                     label="Name"
                     placeholder="Your name"
@@ -98,13 +97,14 @@ const ContactLayout = () => {
                     margin='normal'
                     value={formik.values.name}
                     onChange={formik.handleChange}
+                    error={formik.touched.name && Boolean(formik.errors.name)}
+                    helperText={formik.touched.name && formik.errors.name}
                     sx={{
                         width:'49%',
                         mr: '2%',
                     }}
                 />
                 <StyledTextField
-                    required
                     name='email'
                     label="Email"
                     type='email'
@@ -120,7 +120,6 @@ const ContactLayout = () => {
                     }}
                 />
                 <StyledTextField
-                    required
                     name='subject'
                     label="Subject"
                     placeholder="Write a subject"
@@ -133,7 +132,6 @@ const ContactLayout = () => {
                     helperText={formik.touched.subject && formik.errors.subject}
                 />
                 <StyledTextField
-                    required
                     name='message'
                     label="Message"
                     placeholder="Your message here"
@@ -146,7 +144,7 @@ const ContactLayout = () => {
                     error={formik.touched.message && Boolean(formik.errors.message)}
                     helperText={formik.touched.message && formik.errors.message}
                 />
-                <Button fullWidth type='submit' color='secondary' variant='contained'>
+                <Button fullWidth type='submit' color='secondary' variant='contained' disabled={formik.isSubmitting}>
                     Submit
                 </Button>
             </form>
