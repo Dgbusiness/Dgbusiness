@@ -79,7 +79,7 @@ const Navbar = () => {
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             textAlign: "right",
-                            fontFamily: 'Alkalami',
+                            fontFamily: 'Roboto',
                             fontWeight: 700,
                             letterSpacing: '0',
                             color: 'inherit',

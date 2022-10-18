@@ -95,6 +95,7 @@ const ContactLayout = () => {
                     placeholder="Your name"
                     size='small'
                     margin='normal'
+                    autoComplete='off'
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     error={formik.touched.name && Boolean(formik.errors.name)}
@@ -111,6 +112,7 @@ const ContactLayout = () => {
                     placeholder="Your email"
                     size='small'
                     margin='normal'
+                    autoComplete='off'
                     onChange={formik.handleChange}
                     value={formik.values.email}
                     error={formik.touched.email && Boolean(formik.errors.email)}
@@ -126,6 +128,7 @@ const ContactLayout = () => {
                     size='small'
                     margin='normal'
                     fullWidth
+                    autoComplete='off'
                     onChange={formik.handleChange}
                     value={formik.values.subject}
                     error={formik.touched.subject && Boolean(formik.errors.subject)}
@@ -139,6 +142,7 @@ const ContactLayout = () => {
                     multiline
                     rows={5}
                     margin='normal'
+                    autoComplete='off'
                     onChange={formik.handleChange}
                     value={formik.values.message}
                     error={formik.touched.message && Boolean(formik.errors.message)}
