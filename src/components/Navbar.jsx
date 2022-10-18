@@ -13,7 +13,6 @@ import {useState} from 'react';
 
 const pages = [
     {id: 'about', value:'About'}, 
-    {id: 'skills-and-studies', value:'Skills & Studies'}, 
     {id: 'services', value:'Services'}, 
     {id: 'portfolio', value:'Portfolio'}, 
     {id: 'companies', value:'Companies'}, 

@@ -1,12 +1,13 @@
 import {useState} from 'react';
-import { Box, Grid, Typography, Tabs, Tab } from "@mui/material";
+import { Box, Typography, Tabs, Tab } from "@mui/material";
 import SchoolIcon from '@mui/icons-material/School';
 import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import Skills from '../components/Skills.jsx'
+import Studies from '../components/Studies.jsx'
+import Certificates from '../components/Certificates.jsx'
 import Title from '../components/Title.jsx'
-import { certificates } from '../utils/Certificates.jsx'
-import { SiUdemy } from 'react-icons/si'
+
 
 const openInNewTab = url => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -74,7 +75,7 @@ const AboutLayout = () => {
                 }}
             >
                 <Tabs 
-                    id='skills-and-studies'
+                    id='about'
                     centered
                     value={tabIndex} 
                     textColor='inherit'
@@ -89,11 +90,11 @@ const AboutLayout = () => {
                             color: "white",
                         }}/>
                     <Tab icon={<SchoolIcon />} label="STUDIES" sx={{
-                            color: "white",
-                        }}/>
+                        color: "white",
+                    }}/>
                     <Tab icon={<WorkspacePremiumIcon />} label="CERTIFICATES" sx={{
-                            color: "white",
-                        }}/>
+                        color: "white",
+                    }}/>
                 </Tabs>
                 <Box sx={{ 
                     width:{ xs: '100vw', sm: '100vw', md: '50vw' }, 
@@ -102,52 +103,14 @@ const AboutLayout = () => {
                     alignItems: 'center',
                     py: 5,
                 }} display="flex" gap={6}>
-                    {tabIndex === 0 && (<Skills />)}
-                    {tabIndex === 1 && (
-                        <Box>
-                            <Typography>The second tab</Typography>
-                        </Box>
+                    {tabIndex === 0 && (
+                        <Skills />
                     )}
-                    {tabIndex === 2 && certificates.map( certificate => 
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                justifyContent: 'center',
-                                cursor: 'pointer',
-                                width: '30%',
-                                '&:hover':{
-                                    transform: 'scale3d(1.2, 1.2, 1)',
-                                    transition: 'transform 1s'
-                                }
-                            }}
-                            onClick={() => openInNewTab(certificate.url)}>
-                            <Box fullWidth display='flex' textAlign='center'>
-                                <Box width='80%'>
-                                    <Typography> 
-                                        {certificate.name} 
-                                    </Typography>
-                                </Box>
-                                {certificate.platform === 'udemy' && (
-                                    <Box>
-                                        <SiUdemy style={{ 
-                                            fontSize: 45, 
-                                        }}/>
-                                    </Box>)
-                                }
-                            </Box>
-                            <Box fullWidth>
-                                <Box
-                                    component="img"
-                                    src={certificate.img}
-                                    alt={certificate.name.toLowerCase().trim()}
-                                    sx={{
-                                        height: { xs: 100, sm: 150, md: 200 },
-                                        borderRadius: 10,
-                                    }}
-                                />
-                            </Box>
-                        </Box>
+                    {tabIndex === 1 && (
+                        <Studies />
+                    )}
+                    {tabIndex === 2 && (
+                        <Certificates openInNewTab={openInNewTab}/>
                     )}
                 </Box> 
             </Box>
