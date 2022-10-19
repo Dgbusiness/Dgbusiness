@@ -26,103 +26,79 @@ const HeroBanner = () => {
     ]
 
     return (
-        <Box id="back-to-top-anchor">
-            <Grid
-                container
-                justifyContent="center"
-                alignItems="center"
+        <Box 
+            display='flex'
+            id="back-to-top-anchor"
+            alignItems="center"
+            sx={{
+                justifyContent: { xs: 'center', md: 'flex-start' },
+                height: { xs: "100vh", sm: "100vh", md: "110vh" },
+                background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
+                color: 'white',
+            }}
+        >
+            <Particles 
+                id="tsparticles"
+                init={particlesInit} 
+                loaded={particlesLoaded} 
+                options={options}
+            />
+            <Box
+                display='flex'
                 sx={{
-                    height: { xs: "100vh", sm: "110vh", md: "110vh" },
-                    background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
-                    color: 'white',
+                    flexDirection: 'column',
+                    textAlign: { xs:"center", sm:"center", md:"left"},
+                    marginTop: { xs: 15, sm: 20, md: 0 },
+                    ml: { md: 5 }
                 }}
             >
-                <Particles 
-                    id="tsparticles"
-                    init={particlesInit} 
-                    loaded={particlesLoaded} 
-                    options={options}
-                />
-                <Grid
-                    item={true}
-                    xs={12}
-                    md={6}
+                <Typography 
+                    color="white"
+                    fontFamily="Alkalami"
                     sx={{
-                        textAlign: { xs:"center", sm:"center", md:"left"},
-                        marginTop: { xs: 15, sm: 20, md: 0 },
+                        fontSize: {xs: 25, sm: 50, xl: 80}
+                    }}>
+                    Hi, I'm Daniel Giannotti
+                </Typography>
+                <Typography 
+                    color="#a80c06"
+                    fontWeight="bold"
+                    fontFamily="Alkalami"
+                    letterSpacing=".1rem"
+                    sx={{
+                        fontSize: {xs: 50, sm: 130, xl: 180},
+                        mt: {xs: '1.5vh', sm: '4vh'}
                     }}
                 >
-                    <Typography 
-                        color="white"
-                        fontFamily="Alkalami"
+                    <Carousel 
+                        animation="fade" 
+                        indicators={0} 
+                        interval={2500} 
+                        duration={500} 
+                        navButtonsAlwaysInvisible={1}
                         sx={{
-                            fontSize: {xs: 25, sm: 50, lg: 80}
-                        }}>
-                        Hi, I'm Daniel Giannotti
-                    </Typography>
-                    <Typography 
-                        color="#a80c06"
-                        fontWeight="bold"
-                        fontFamily="Alkalami"
-                        letterSpacing=".1rem"
-                        sx={{
-                            fontSize: {xs: 50, sm: 130, lg: 180},
-                            marginTop: {xs: '1vh', sm: '3vh'}
+                            overflow: 'visible !important',
+                            lineHeight: .5,
                         }}
-                    >
-                        <Carousel 
-                            animation="fade" 
-                            indicators={0} 
-                            interval={2500} 
-                            duration={500} 
-                            navButtonsAlwaysInvisible={1}
-                            sx={{
-                                overflow: 'visible !important',
-                                lineHeight: .5,
-                            }}
-                            axys="y">
-                            {
-                                skills.map( (item, i) => 
-                                    item.value  
-                                )
-                            } 
-                        </Carousel>Developer
-                    </Typography>
-                    <Typography 
-                        color="white"
-                        fontWeight={550}
-                        fontFamily="Alkalami"
-                        sx={{
-                            fontSize: {xs: 20, sm: 50, lg: 80},
-                            mt: {xs: -2, sm: -4, lg: -8}
-                        }}>
-                        Based in Venezuela.
-                    </Typography>
-
-                </Grid>
-                <Grid
-                    item={true}
-                    xs={12}
-                    md={6}
+                        axys="y">
+                        {
+                            skills.map( (item, i) => 
+                                item.value  
+                            )
+                        } 
+                    </Carousel>Developer
+                </Typography>
+                <Typography 
+                    color="white"
+                    fontWeight={550}
+                    fontFamily="Alkalami"
                     sx={{
-                        textAlign: "center",
-                        marginTop: { xs: 15, sm: 20, md: 0 },
-                    }}
-                >
-
-                    <Box
-                        component="img"
-                        src={`https://www.giantbomb.com/a/uploads/original/5/56742/3061198-arthur%20portrait%20transparent.png`}
-                        alt="cgianns"
-                        sx={{
-                            height: { xs: 250, sm: 300, md: 350, lg: "100vh" },
-                            marginBottom: { xs: 15, md: 0 },
-                        }}
-                        className="mouse-wheel2"
-                    />
-
-                </Grid>
-            </Grid>
+                        fontSize: {xs: 20, sm: 50, xl: 80},
+                        mt: {xs: -3, sm: -6, xl: -8}
+                    }}>
+                    Based in Venezuela.
+                </Typography>
+            </Box>
         </Box>
     )
 }

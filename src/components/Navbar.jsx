@@ -61,6 +61,7 @@ const Navbar = () => {
     return (
         <AppBar 
             position="fixed" 
+            component='nav'
             sx={{ 
                 background: changeBG
                     ? `rgba(0,0,0,.8)`
@@ -68,29 +69,22 @@ const Navbar = () => {
                 boxShadow: changeBG ? "" : "none",
                 pt: 1
             }}>
-            <Container maxWidth="100vw">
-                <Toolbar disableGutters>
-                    <Typography
-                        variant="h3"
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            textAlign: "right",
-                            fontFamily: 'Roboto',
-                            fontWeight: 700,
-                            letterSpacing: '0',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        DG
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Toolbar >
+                <Box 
+                    sx={{
+                        display: { xs: 'flex', md: 'none' }, 
+                        width: '100%',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        position: 'relative'
+                    }}
+                > 
+                    <Box 
+                        sx={{ 
+                            display: { xs: 'flex', md: 'none' }, 
+                        }}>
                         <IconButton
-                            size="large"
                             aria-label="account of current user"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
@@ -114,7 +108,7 @@ const Navbar = () => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' }
+                                display: { xs: 'flex', md: 'none' }
                             }}
                         >
                             {pages.map((page) => (
@@ -127,45 +121,62 @@ const Navbar = () => {
                         </Menu>
                     </Box>
                     <Typography
-                        variant="h5"
+                        variant="h4"
                         noWrap
                         component="a"
                         href=""
                         sx={{
-                            mr: 2,
                             display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
+                            fontFamily: 'Roboto',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            position: 'absolute',
+                            left: '50%',
                         }}
                     >
                         DG
                     </Typography>
-                    <Box sx={{ 
-                        flexGrow: 1, 
-                        display: { xs: 'none', md: 'flex' }, 
-                    }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page.id}
-                                onClick={(e) => handlePageSeleted(e, page.id)}
-                                sx={{ my: 2, color: 'white', display: 'block',
-                                    "&:hover": { 
-                                        fontWeight: "bold",
-                                        color: "#a80c06",
-                                        textDecoration: "underline #a80c06 .15rem"
-                                    }, 
-                                }}
-                            >
-                                {page.value}
-                            </Button>
-                        ))}
-                    </Box>
-                </Toolbar>
-            </Container>
+                </Box>
+                <Typography
+                    variant="h3"
+                    component="a"
+                    href="/"
+                    sx={{
+                        mr: 2,
+                        display: { xs: 'none', md: 'flex' },
+                        textAlign: "right",
+                        fontFamily: 'Roboto',
+                        fontWeight: 700,
+                        letterSpacing: '0',
+                        color: 'inherit',
+                        textDecoration: 'none',
+                    }}
+                >
+                    DG
+                </Typography>
+                <Box sx={{ 
+                    flexGrow: 1, 
+                    display: { xs: 'none', md: 'flex' }, 
+                }}>
+                    {pages.map((page) => (
+                        <Button
+                            key={page.id}
+                            onClick={(e) => handlePageSeleted(e, page.id)}
+                            sx={{ my: 2, color: 'white', display: 'block',
+                                "&:hover": { 
+                                    fontWeight: "bold",
+                                    color: "#a80c06",
+                                    textDecoration: "underline #a80c06 .15rem"
+                                }, 
+                            }}
+                        >
+                            {page.value}
+                        </Button>
+                    ))}
+                </Box>
+            </Toolbar>
         </AppBar>
     );
 };
