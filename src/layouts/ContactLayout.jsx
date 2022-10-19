@@ -28,7 +28,7 @@ const StyledTextField = withStyles({
 
 
 const ContactLayout = () => {
-    
+
     /*Initial values (Formik)*/
     const initialValues = {
         name: '',
@@ -148,7 +148,19 @@ const ContactLayout = () => {
                     error={formik.touched.message && Boolean(formik.errors.message)}
                     helperText={formik.touched.message && formik.errors.message}
                 />
-                <Button fullWidth type='submit' color='secondary' variant='contained' disabled={formik.isSubmitting}>
+                <Button
+                    sx={{
+                        borderRadius: 5,
+                        backgroundColor: "#a80c06",
+                        fontSize: "15px",
+                        color: 'white',
+                        '&:hover':{
+                            bgcolor: 'rgba(120, 12, 6,1)'
+                        }
+                    }}
+                    fullWidth 
+                    type='submit' 
+                    disabled={formik.isSubmitting}>
                     Submit
                 </Button>
             </form>
