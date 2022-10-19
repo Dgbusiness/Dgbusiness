@@ -35,7 +35,6 @@ const HeroBanner = () => {
                     height: { xs: "100vh", sm: "110vh", md: "110vh" },
                     background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
                     color: 'white',
-                    pl: "2rem"
                 }}
             >
                 <Particles 
@@ -54,23 +53,22 @@ const HeroBanner = () => {
                     }}
                 >
                     <Typography 
-                        variant="h2"
                         color="white"
-                        fontWeight={550}
                         fontFamily="Alkalami"
-                        data-aos="fade"
-                        data-aos-duration="3000">
+                        sx={{
+                            fontSize: {xs: 25, sm: 50, lg: 80}
+                        }}>
                         Hi, I'm Daniel Giannotti
                     </Typography>
                     <Typography 
-                        variant="h2"
                         color="#a80c06"
                         fontWeight="bold"
-                        fontSize={150}
                         fontFamily="Alkalami"
                         letterSpacing=".1rem"
-                        data-aos="fade"
-                        data-aos-duration="3000"
+                        sx={{
+                            fontSize: {xs: 50, sm: 130, lg: 180},
+                            marginTop: {xs: '1vh', sm: '3vh'}
+                        }}
                     >
                         <Carousel 
                             animation="fade" 
@@ -79,9 +77,8 @@ const HeroBanner = () => {
                             duration={500} 
                             navButtonsAlwaysInvisible={1}
                             sx={{
-                                overflow: "visible !important", 
+                                overflow: 'visible !important',
                                 lineHeight: .5,
-                                mt: "5vh"
                             }}
                             axys="y">
                             {
@@ -89,18 +86,16 @@ const HeroBanner = () => {
                                     item.value  
                                 )
                             } 
-                        </Carousel> Developer
+                        </Carousel>Developer
                     </Typography>
                     <Typography 
-                        variant="h2"
                         color="white"
                         fontWeight={550}
                         fontFamily="Alkalami"
-                        data-aos="fade"
                         sx={{
-                            lineHeight: 0,
-                        }}
-                        data-aos-duration="3000">
+                            fontSize: {xs: 20, sm: 50, lg: 80},
+                            mt: {xs: -2, sm: -4, lg: -8}
+                        }}>
                         Based in Venezuela.
                     </Typography>
 
