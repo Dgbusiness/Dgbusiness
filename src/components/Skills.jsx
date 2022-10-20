@@ -12,8 +12,8 @@ const Skills = () => {
             sx={{
                 height: { xs: 40, sm: 50, md: 65 },
                 width: { xs: 40, sm: 50, md: 65 },
-                marginBottom: { xs: 15, md: 0 },
                 borderRadius: "10%",
+                p: .5,
                 background: "white",
             }}
             className="mouse-wheel2"

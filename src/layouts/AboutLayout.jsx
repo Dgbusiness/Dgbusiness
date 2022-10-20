@@ -26,7 +26,6 @@ const AboutLayout = () => {
         <Box 
             display='flex'
             sx={{
-                height: { xs: "100vh", sm: "110vh", md: "auto" },
                 background: `rgba(50,50,50,1)`,
                 color: 'white',
                 textAlign: 'center',
@@ -37,15 +36,21 @@ const AboutLayout = () => {
             alignItems="center"
         >
             <Title title='About' />
-            <Box display='flex' justifyContent='center' alignItems='center'>
+            <Box 
+                display='flex' 
+                justifyContent='center' 
+                alignItems='center' 
+                sx={{
+                    flexDirection: { xs: 'column', md: 'row' }
+                }}>
                 <Box
                     component="img"
                     src={`https://www.giantbomb.com/a/uploads/original/5/56742/3061198-arthur%20portrait%20transparent.png`}
                     alt="profilePicture"
                     sx={{
-                        height: { xs: 100, sm: 150, md: 250 },
-                        width: { xs: 100, sm: 150, md: 250 },
-                        marginBottom: { xs: 15, md: 0 },
+                        height: { xs: 150, sm: 250 },
+                        width: { xs: 150, sm: 250 },
+                        marginBottom: { xs: 2, md: 0 },
                         borderRadius: "100%",
                         background: "black",
                         mx: 2 
@@ -53,7 +58,7 @@ const AboutLayout = () => {
                 />
                 <Typography 
                     sx={{
-                        width: '30%',
+                        width: {xs: 'full', md: '30%'},
                         textAlign: 'justify'
                     }}
                     color="white"
@@ -67,7 +72,7 @@ const AboutLayout = () => {
                 md={12}
                 sx={{
                     textAlign: { xs:"center", sm:"center", md:"center"},
-                    marginTop: { xs: 15, sm: 20, md: 0 },
+                    marginTop: { xs: 5,  md: 0 },
                     alignItems: "center",
                     justifyContent: "center",
                     flexWrap: 'wrap',
@@ -97,7 +102,7 @@ const AboutLayout = () => {
                     }}/>
                 </Tabs>
                 <Box sx={{ 
-                    width:{ xs: '100vw', sm: '100vw', md: '50vw' }, 
+                    width:{ xl: '50vw' }, 
                     flexWrap: 'wrap', 
                     justifyContent: 'center',
                     alignItems: 'center',

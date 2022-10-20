@@ -9,14 +9,14 @@ const Certificates = ({ openInNewTab }) => (certificates.map( certificate =>
             flexWrap: 'wrap',
             justifyContent: 'center',
             cursor: 'pointer',
-            width: '30%',
+            width: { xs: '60%', sm: '40%', md: '30%' },
             '&:hover':{
                 transform: 'scale3d(1.2, 1.2, 1)',
                 transition: 'transform 1s'
             }
         }}
         onClick={() => openInNewTab(certificate.url)}>
-        <Box fullWidth display='flex' textAlign='center'>
+        <Box display='flex' textAlign='center'>
             <Box width='80%'>
                 <Typography> 
                     {certificate.name} 
@@ -37,7 +37,7 @@ const Certificates = ({ openInNewTab }) => (certificates.map( certificate =>
                 alt={certificate.name.toLowerCase().trim()}
                 sx={{
                     height: { xs: 100, sm: 150, md: 200 },
-                    borderRadius: 10,
+                    borderRadius: 4,
                 }}
             />
         </Box>
