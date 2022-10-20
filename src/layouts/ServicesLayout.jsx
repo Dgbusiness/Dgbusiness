@@ -40,7 +40,7 @@ const ServicesLayout = () => {
                     transition: "transform 0.15s ease-in-out",
                     transform: (hover && cardSelected === index) ? "scale3d(1.05, 1.05, 1)" : "0",
                     maxWidth: 345, 
-                    height: 500,
+                    height: {xs: 400, sm: 500},
                     borderRadius: 10, 
                     m: 5, 
                     cursor: 'pointer',
@@ -59,13 +59,21 @@ const ServicesLayout = () => {
                         textAlign: 'center',
                         fontFamily:"Alkalami"
                     }}>
-                    <Typography gutterBottom variant="h4" component="div">
+                    <Typography sx={{ display: {xs: 'block', sm: 'none'}}} gutterBottom variant="h5" component="div">
+                       {service.name} 
+                    </Typography>
+                    <Typography sx={{ display: {xs: 'none', sm: 'block'}}} gutterBottom variant="h4" component="div">
                         {service.name}
                     </Typography>
                     {(hover && cardSelected === index) && (
-                        <Typography variant="h6" color="text.secondary">
-                            {service.description}
-                        </Typography>
+                        <>
+                            <Typography sx={{ display: {xs: 'block', sm: 'none'}}} variant="h6" color="text.secondary">
+                                {service.description}
+                            </Typography>
+                            <Typography sx={{ display: {xs: 'none', sm: 'block'}}} variant="h5" color="text.secondary">
+                                {service.description}
+                            </Typography>
+                        </>
                     )}
                 </CardContent>
             </Card> 
