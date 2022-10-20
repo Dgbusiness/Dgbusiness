@@ -12,13 +12,22 @@ const Title = ({ title, subtitle }) => {
                 {title} 
             </Typography>
             {subtitle && (
-                <Typography 
-                    sx={{ width: '100%', pt: 5 }}
-                    variant="h4"
-                    color="white"
-                    fontFamily="Roboto">
-                    {subtitle} 
-                </Typography>
+                <>
+                    <Typography 
+                        sx={{ display: {xs: 'none', sm:'block'}, width: '100%', pt: 5, }}
+                        variant="h4"
+                        color="white"
+                        fontFamily="Roboto">
+                        {subtitle} 
+                    </Typography>
+                    <Typography 
+                        sx={{ display: {xs: 'block', sm:'none'}, width: '100%', pt: 5, }}
+                        variant="h5"
+                        color="white"
+                        fontFamily="Roboto">
+                        {subtitle} 
+                    </Typography>
+                </>
 
             )}
         </>
