@@ -43,14 +43,13 @@ const CompaniesLayout = () => {
                             alt="cgianns"
                             sx={{
                                 height: element.type !== 'svg' ? 'auto' : 120,
-                                width: "16%",
+                                width: {xs: '80%', sm: '30%', md: "16%"},
                                 cursor: 'pointer',
                                 px: 2,
                                 '&:hover':{
                                     transform: 'scale3d(1.2, 1.2, 1)'
                                 }
                             }}
-                            className="mouse-wheel2"
                         />
                     ))
                 }
@@ -106,7 +105,14 @@ const CompaniesLayout = () => {
                         sx={{
                         }}>
                         {
-                            Item([...companies], 6) 
+                            Item(
+                                [...companies], 
+                                window.innerWidth >= 450 
+                                    ? window.innerWidth >= 770
+                                        ? 5
+                                    : 3
+                                : 1
+                            ) 
                         } 
                     </Carousel>
                 </Grid>
