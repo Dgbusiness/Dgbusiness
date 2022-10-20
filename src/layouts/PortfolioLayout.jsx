@@ -49,9 +49,9 @@ const PortfolioLayout = () => {
                     sx={{
                         transition: "transform 0.5s ease-in-out",
                         transform: (hover && cardSelected === index) ? "scale3d(1.5, 1.5, 1) rotateY(180deg)" : "0",
-                        width: 400,
-                        maxWidth: {xs: '100%', sm: '50vw', md: '25vw'}, 
-                        height: {xs: 300, sm: 300, md: 350},
+                        width: {xs: 'auto', sm: '50vw', md: '30vw'}, 
+                        maxWidth: 350,
+                        height: {xs: 250, sm: 300, md: 350},
                         borderRadius: 10, 
                         m: (hover && cardSelected === index) ? 10 : 5,
                         m: 5, 
@@ -82,7 +82,7 @@ const PortfolioLayout = () => {
                                 <Typography variant="h6" component="div"
                                     sx={{
                                         position: 'absolute',
-                                        top: "35%",
+                                        top: {xs: '30%', sm: "35%"},
                                         right: 0,
                                         left: 0,
                                         m: 'auto',
@@ -92,14 +92,14 @@ const PortfolioLayout = () => {
                                     }}
                                 >
                                     {project.topTools}
-                                <Divider 
-                                    sx={{ 
-                                        bgcolor: 'white', 
-                                        border: .5, 
-                                        textShadow: '2.5px 2.5px 2.5px black',
-                                        mt: 1 
-                                    }}
-                                />
+                                    <Divider 
+                                        sx={{ 
+                                            bgcolor: 'white', 
+                                            border: .5, 
+                                            textShadow: '2.5px 2.5px 2.5px black',
+                                            mt: 1 
+                                        }}
+                                    />
                                 </Typography>
                                 <Typography variant="h4" component="div"
                                     sx={{
@@ -120,8 +120,9 @@ const PortfolioLayout = () => {
                             <Typography 
                                 variant="body2"
                                 sx={{
-                                    textAlign: 'justify',
+                                    textAlign: {xs: 'left', sm: 'justify'},
                                     fontWeight: '28px',
+                                    fontSize: { xs: '7.5px', sm: '0.8rem'},
                                     transform: "rotateY(-180deg)",
                                     fontFamily:"Roboto",
                                 }}
@@ -139,9 +140,24 @@ const PortfolioLayout = () => {
                         sx={{
                             alignItems: 'center',
                             justifyContent: 'center',
-                            transform: "rotateY(-180deg)"
+                            transform: "rotateY(-180deg)",
                         }}>
-                        <Button onClick={() => openInNewTab(project.url)} size="small">View Site</Button>
+                        <Button 
+                            sx={{ 
+                                bgcolor: '#a80c06', 
+                                '&:hover': {
+                                    bgcolor: 'rgb(120, 12, 6)'
+                                },
+                                borderRadius: 1, 
+                                color: 'white', 
+                                fontWeight: 'bold',
+                                fontSize: { xs: 9 }, 
+                                mt:{xs: -1.5, sm: -1, md: -.5, lg: 0 } 
+                            }} 
+                            onClick={() => openInNewTab(project.url)} 
+                            size="small">
+                            View Site
+                        </Button>
                     </CardActions>
                 </Card> 
             </Box>
