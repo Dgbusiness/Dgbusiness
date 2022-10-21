@@ -7,6 +7,7 @@ import Skills from '../components/Skills.jsx'
 import Studies from '../components/Studies.jsx'
 import Certificates from '../components/Certificates.jsx'
 import Title from '../components/Title.jsx'
+import profile from '../assets/img/profile.jpg'
 
 
 const openInNewTab = url => {
@@ -45,7 +46,7 @@ const AboutLayout = () => {
                 }}>
                 <Box
                     component="img"
-                    src={`https://www.giantbomb.com/a/uploads/original/5/56742/3061198-arthur%20portrait%20transparent.png`}
+                    src={profile}
                     alt="profilePicture"
                     sx={{
                         height: { xs: 150, sm: 250 },
@@ -53,7 +54,8 @@ const AboutLayout = () => {
                         marginBottom: { xs: 2, md: 0 },
                         borderRadius: "100%",
                         background: "black",
-                        mx: 2 
+                        mx: 2, 
+                        p: .5
                     }}
                 />
                 <Typography 

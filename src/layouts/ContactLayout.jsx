@@ -5,6 +5,7 @@ import { withStyles } from '@mui/styles';
 import * as yup from 'yup';
 import { toast, ToastContainer } from "react-toastify"
 import emailjs from "@emailjs/browser"
+import 'react-toastify/dist/ReactToastify.css';
 
 const StyledTextField = withStyles({
     root: {
