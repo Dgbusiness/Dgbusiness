@@ -3,6 +3,8 @@ import Title from '../components/Title.jsx'
 import { useFormik } from 'formik';
 import { withStyles } from '@mui/styles';
 import * as yup from 'yup';
+import { toast, ToastContainer } from "react-toastify"
+import emailjs from "@emailjs/browser"
 
 const StyledTextField = withStyles({
     root: {
@@ -61,9 +63,45 @@ const ContactLayout = () => {
     })
 
     /*onSubmit function (Formik)*/
-    const onSubmit = values => {
-        console.log('entro')
-        alert(JSON.stringify(values, null, 2));
+    const onSubmit = (values, { resetForm }) => {
+        try {
+            emailjs
+                .send(
+                    process.env.REACT_APP_EMAIL_SERVICE_ID,
+                    process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+                    values,
+                    process.env.REACT_APP_EMAIL_PUBLIC_KEY
+                )
+                .then((result) => {
+                    toast.success('Your email has been successfully sent. I will contact you as soon as possible. 👍', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
+                    resetForm({
+                        values: {
+                            name: "",
+                            email: "",
+                            subject: "",
+                            message: "",
+                        },
+                    });
+                });
+        } catch (error) {
+            toast.error('There was a problem sending the email, please try again.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        } 
     } 
 
     const formik = useFormik({
@@ -85,6 +123,17 @@ const ContactLayout = () => {
                 textAlign: 'center',
                 py: 5
             }}>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <Title title='Contact me' subtitle='I am available for full time, part time and freelance work. Connect with me via email: dgbusiness26@gmail.com'/>
             <Box sx={{ px: { xs: 1, md: 0 } }}>
                 <form onSubmit={formik.handleSubmit}>
