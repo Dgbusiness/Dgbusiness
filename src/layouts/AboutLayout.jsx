@@ -25,6 +25,7 @@ const AboutLayout = () => {
 
     return (
         <Box 
+            id='about'
             display='flex'
             sx={{
                 background: `rgba(50,50,50,1)`,
@@ -82,7 +83,6 @@ const AboutLayout = () => {
                 }}
             >
                 <Tabs 
-                    id='about'
                     centered
                     value={tabIndex} 
                     textColor='inherit'

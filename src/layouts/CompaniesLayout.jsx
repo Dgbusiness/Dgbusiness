@@ -1,5 +1,4 @@
-import { Box, Grid, Typography, Card, CardMedia, CardContent } from "@mui/material";
-import {useState} from "react";
+import { Box, Grid } from "@mui/material";
 import { companies } from '../utils/CompaniesList'
 import Title from '../components/Title.jsx'
 import Carousel from 'react-material-ui-carousel'

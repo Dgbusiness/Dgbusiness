@@ -3,12 +3,16 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import {useState} from 'react';
-
+import * as React from 'react';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 
 const pages = [
     {id: 'about', value:'About'}, 
@@ -19,15 +23,15 @@ const pages = [
 ]
 
 const Navbar = () => {
-    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(false);
     const [changeBG, setChangeBG] = useState(false);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
+    const handleOpenNavMenu = () => {
+        setAnchorElNav(true);
     };
 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
+        setAnchorElNav(false);
     };
 
     const handlePageSeleted = (event, id) => {
@@ -36,9 +40,7 @@ const Navbar = () => {
         );
 
         if (anchor) {
-            anchor.scrollIntoView({
-                block: 'center',
-            });
+            anchor.scrollIntoView();
         }
     };
 
@@ -92,32 +94,36 @@ const Navbar = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'flex', md: 'none' }
-                            }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page.value+page.id} sx={{ 
-
-                                }}>
-                                    <Typography textAlign="center" onClick={handlePageSeleted}>{page.value}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+                        <Box component="nav">
+                            <Drawer
+                                variant="temporary"
+                                open={anchorElNav}
+                                onClose={handleCloseNavMenu}
+                                ModalProps={{
+                                    keepMounted: true, // Better open performance on mobile.
+                                }}
+                                sx={{
+                                    display: { xs: 'block', sm: 'none' },
+                                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '75%', bgcolor: 'rgb(30,30,30)', color: 'white' },
+                                }}
+                            >
+                                <Box onClick={handleCloseNavMenu} sx={{ textAlign: 'center' }}>
+                                    <Typography variant="h4" fontFamily='Roboto' sx={{ my: 2 }}>
+                                        DG
+                                    </Typography>
+                                    <Divider sx={{ bgcolor: 'white'}}/>
+                                    <List>
+                                        {pages.map((page) => (
+                                            <ListItem key={page.id} disablePadding>
+                                                <ListItemButton sx={{ textAlign: 'center', '&:hover': { bgcolor: 'rgb(50,50,50)' } }}>
+                                                    <ListItemText onClick={(e) => handlePageSeleted(e, page.id)} primary={page.value} />
+                                                </ListItemButton>
+                                            </ListItem>
+                                        ))}
+                                    </List>
+                                </Box>
+                            </Drawer>
+                        </Box>
                     </Box>
                     <Typography
                         variant="h4"

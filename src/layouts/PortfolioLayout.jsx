@@ -54,7 +54,6 @@ const PortfolioLayout = () => {
                         height: {xs: 250, sm: 300, md: 350},
                         borderRadius: 10, 
                         m: (hover && cardSelected === index) ? 10 : 5,
-                        m: 5, 
                         position: "relative",
                         cursor: 'pointer',
                         zIndex: (hover && cardSelected === index) ? 100 : 0,

@@ -2,9 +2,10 @@ import React from 'react'
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { options } from '../utils/ParticlesOptions.jsx';
 import Carousel from 'react-material-ui-carousel'
+import bg from '../assets/img/bg.png';
 
 const HeroBanner = () => {
     const particlesInit = useCallback(async (engine) => {
@@ -33,8 +34,11 @@ const HeroBanner = () => {
             sx={{
                 justifyContent: { xs: 'center', md: 'flex-start' },
                 height: { xs: "100vh", sm: "100vh", md: "110vh" },
-                background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
-                color: 'white',
+                backgroundImage: `url(${bg})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+                //background: `radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 100%)`,
             }}
         >
             <Particles 
