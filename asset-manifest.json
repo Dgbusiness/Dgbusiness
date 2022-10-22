@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dgbusiness/static/css/main.21ac0e75.css",
-    "main.js": "/Dgbusiness/static/js/main.4d9c4fb0.js",
+    "main.js": "/Dgbusiness/static/js/main.36a85db7.js",
     "static/js/787.1ed0c42c.chunk.js": "/Dgbusiness/static/js/787.1ed0c42c.chunk.js",
     "static/media/portfolio.png": "/Dgbusiness/static/media/portfolio.f403821bb886c0fb5762.png",
     "static/media/logo_ucv.png": "/Dgbusiness/static/media/logo_ucv.1e4cb97a658e0f19e8fb.png",
@@ -18,11 +18,11 @@
     "static/media/ct.svg": "/Dgbusiness/static/media/ct.deda4a66dc799896c862dcc54a14f4c5.svg",
     "index.html": "/Dgbusiness/index.html",
     "main.21ac0e75.css.map": "/Dgbusiness/static/css/main.21ac0e75.css.map",
-    "main.4d9c4fb0.js.map": "/Dgbusiness/static/js/main.4d9c4fb0.js.map",
+    "main.36a85db7.js.map": "/Dgbusiness/static/js/main.36a85db7.js.map",
     "787.1ed0c42c.chunk.js.map": "/Dgbusiness/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21ac0e75.css",
-    "static/js/main.4d9c4fb0.js"
+    "static/js/main.36a85db7.js"
   ]
 }
