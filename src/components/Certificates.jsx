@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { certificates } from '../utils/Certificates.jsx'
 import { SiUdemy } from 'react-icons/si'
 
-const Certificates = ({ openInNewTab }) => (certificates.length > 1 
+const Certificates = ({ openInNewTab }) => (certificates.length
     ? (certificates.map( certificate => 
         <Box
             sx={{
