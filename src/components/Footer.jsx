@@ -11,6 +11,7 @@ const openInNewTab = url => {
 
 const Footer = () => {
 
+    const currentYear = new Date().getFullYear();
     return (
         <Box 
             id="footer"
@@ -114,7 +115,7 @@ const Footer = () => {
                             justifyContent:'center',
                             alignItems: 'center'
                         }}>
-                        Copyright &#169; 2022 Daniel Giannotti. All Rights Reserved.
+                        Copyright &#169; {currentYear} Daniel Giannotti. All Rights Reserved.
                     </Typography>
                 </Box>
                 <Box
@@ -173,7 +174,7 @@ const Footer = () => {
                         color: 'inherit',
                         textDecoration: 'none',
                     }}>
-                    Copyright &#169; 2022 Daniel Giannotti. All Rights Reserved.
+                    Copyright &#169; {currentYear} Daniel Giannotti. All Rights Reserved.
                 </Typography>
             </Box>
         </Box>

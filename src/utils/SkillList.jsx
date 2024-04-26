@@ -1,6 +1,8 @@
 export const skills = [
-    {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg", name: "laravel"},
+    {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg", name: "laravel"},
     {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg", name: "react"},
+    {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", name: "docker"},
+    {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg", name: "k8s"},
     {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg", name: "cplusplus"},
     {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg", name: "c"},
     {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg", name: "javascript"},

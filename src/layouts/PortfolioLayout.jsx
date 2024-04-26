@@ -44,7 +44,7 @@ const PortfolioLayout = () => {
                 onMouseOut={handleOutHover}>
                 <Card 
                     sx={{
-                        transition: "transform 0.5s ease-in-out",
+                        transition: "transform 0.5s ease-in-out, margin .5s ease-in-out",
                         transform: (hover && cardSelected === index) ? "scale3d(1.5, 1.5, 1) rotateY(180deg)" : "0",
                         width: {xs: 'auto', sm: '50vw', md: '30vw'}, 
                         maxWidth: 350,

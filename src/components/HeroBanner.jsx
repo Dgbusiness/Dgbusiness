@@ -21,9 +21,9 @@ const HeroBanner = () => {
     }, []);
 
     const skills = [
-        {id: 0, value: "Web"},
-        {id: 1, value: "Mobile"},
-        {id: 2, value: "Videogame"},
+        {id: 0, value: "Web Developer"},
+        {id: 1, value: "Mobile Developer"},
+        {id: 2, value: "Videogame Developer"},
     ]
 
     return (
@@ -82,7 +82,7 @@ const HeroBanner = () => {
                         navButtonsAlwaysInvisible={1}
                         sx={{
                             overflow: 'visible !important',
-                            lineHeight: .5,
+                            lineHeight: .9,
                         }}
                         axys="y">
                         {
@@ -90,17 +90,7 @@ const HeroBanner = () => {
                                 item.value  
                             )
                         } 
-                    </Carousel>Developer
-                </Typography>
-                <Typography 
-                    color="white"
-                    fontWeight={550}
-                    fontFamily="Alkalami"
-                    sx={{
-                        fontSize: {xs: 20, sm: 50, xl: 80},
-                        mt: {xs: -3, sm: -6, xl: -8}
-                    }}>
-                    Based in Venezuela.
+                    </Carousel>
                 </Typography>
             </Box>
         </Box>

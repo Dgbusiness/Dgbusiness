@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import ucv from '../assets/img/logo_ucv.png'
+import ucv from '../assets/img/logo_ucv.webp'
 
 const Studies = () => (
     <Box
@@ -34,7 +34,7 @@ const Studies = () => (
             </Typography>
             <Typography 
                 variant='h6'> 
-                2015 - 2022 
+                2024 
             </Typography>
         </Box>
     </Box>

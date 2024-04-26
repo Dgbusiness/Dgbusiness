@@ -7,7 +7,7 @@ import Skills from '../components/Skills.jsx'
 import Studies from '../components/Studies.jsx'
 import Certificates from '../components/Certificates.jsx'
 import Title from '../components/Title.jsx'
-import profile from '../assets/img/profile.jpg'
+import profile from '../assets/img/profile.webp'
 
 
 const openInNewTab = url => {
@@ -50,8 +50,8 @@ const AboutLayout = () => {
                     src={profile}
                     alt="profilePicture"
                     sx={{
-                        height: { xs: 150, sm: 250 },
-                        width: { xs: 150, sm: 250 },
+                        height: { xs: 150, sm: 350 },
+                        width: { xs: 150, sm: 300 },
                         marginBottom: { xs: 2, md: 0 },
                         borderRadius: "100%",
                         background: "black",
