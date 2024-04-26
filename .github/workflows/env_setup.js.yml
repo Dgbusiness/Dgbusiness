@@ -16,7 +16,7 @@ jobs:
 
     - name: Build
       run: |
-        npm install
+        npm install --legacy-peer-deps
         npm run-script build
       env:
         REACT_APP_EMAIL_SERVICE_ID: ${{ secrets.REACT_APP_EMAIL_SERVICE_ID }}
