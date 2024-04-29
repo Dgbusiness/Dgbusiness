@@ -27,7 +27,7 @@ const CompaniesLayout = () => {
         let result = dataChunks.map((item, index) => (
             <Box key={(JSON.stringify(item).trim())} sx={{
                 display: 'flex',
-                gap: 2,
+                gap: 10,
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: 180
@@ -44,9 +44,11 @@ const CompaniesLayout = () => {
                                 height: element.type !== 'svg' ? 'auto' : 120,
                                 width: {xs: '80%', sm: '30%', md: "16%"},
                                 cursor: 'pointer',
+                                transition: "transform .5s",
                                 px: 2,
                                 '&:hover':{
-                                    transform: 'scale3d(1.2, 1.2, 1)'
+                                    transform: 'scale3d(1.2, 1.2, 1)',
+                                    transition: "transform .5s"
                                 }
                             }}
                         />
@@ -106,11 +108,11 @@ const CompaniesLayout = () => {
                         {
                             Item(
                                 [...companies], 
-                                window.innerWidth >= 450 
-                                    ? window.innerWidth >= 770
-                                        ? 5
-                                    : 3
-                                : 1
+                                (window.innerWidth >= 450 
+                                    ? (window.innerWidth >= 700
+                                        ? 4
+                                    : 2)
+                                : 1)
                             ) 
                         } 
                     </Carousel>

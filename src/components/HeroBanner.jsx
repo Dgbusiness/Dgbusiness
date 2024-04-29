@@ -21,9 +21,13 @@ const HeroBanner = () => {
     }, []);
 
     const skills = [
-        {id: 0, value: "Web Developer"},
-        {id: 1, value: "Mobile Developer"},
-        {id: 2, value: "Videogame Developer"},
+        {id: 0, value: "Software Engineer"},
+        // {id: 0, value: "Web Developer"},
+        // {id: 1, value: "Mobile Developer"},
+        // {id: 2, value: "Videogame Developer"},
+        {id: 3, value: "DevOps Engineer"},
+        {id: 4, value: "Cloud Engineer"},
+        {id: 5, value: "Digital Marketing Specialist"},
     ]
 
     return (
@@ -68,7 +72,6 @@ const HeroBanner = () => {
                     color="#a80c06"
                     fontWeight="bold"
                     fontFamily="Alkalami"
-                    letterSpacing=".1rem"
                     sx={{
                         fontSize: {xs: 50, sm: 130, xl: 180},
                         mt: {xs: '1.5vh', sm: '4vh'}
@@ -78,7 +81,7 @@ const HeroBanner = () => {
                         animation="fade" 
                         indicators={0} 
                         interval={2500} 
-                        duration={500} 
+                        duration={600} 
                         navButtonsAlwaysInvisible={1}
                         sx={{
                             overflow: 'visible !important',

@@ -9,5 +9,5 @@ export const projects = [
     {name: 'Telón de Arena', type: 'Module/Plugin', topTools: 'Drupal', tools: 'Drupal', url: 'https://www.telondearena.org/', img: telon},
     {name: 'Datarock', type: 'Web Aplication', topTools: 'Laravel', tools: 'Laravel, JQuery, HTML5, CSS3, Bootstrap', url: 'https://www.datarock.com.co/', img: datarock},
     {name: 'Barbas\'S', type: 'Web Catalog and Blog', topTools: 'Wordpress', tools: 'Wordpress', url: 'https://barbassoficial.com/', img: barbass},
-    {name: 'Portfolio', type: 'Single Web Application', topTools: 'React', tools: 'React, Material UI', url: 'localhost:3000', img: portfolio},
+    {name: 'Portfolio', type: 'Single Web Application', topTools: 'React', tools: 'React, Material UI', url: 'https://dgbusiness.github.io/Dgbusiness/', img: portfolio},
 ]
