@@ -1,6 +1,6 @@
-import gads from "../assets/img/skills/gads.svg"
+// import gads from "../assets/img/skills/gads.svg"
 import fbads from "../assets/img/skills/meta.svg"
-import seo from "../assets/img/skills/seo.svg"
+// import seo from "../assets/img/skills/seo.svg"
 
 export const skills = {
     "Web Development": [
