@@ -1,34 +1,39 @@
 {
   "files": {
     "main.css": "/Dgbusiness/static/css/main.18016f8d.css",
-    "main.js": "/Dgbusiness/static/js/main.ad5e43f6.js",
+    "main.js": "/Dgbusiness/static/js/main.e1320761.js",
     "static/js/453.ace21015.chunk.js": "/Dgbusiness/static/js/453.ace21015.chunk.js",
+    "static/media/dms.webp": "/Dgbusiness/static/media/dms.80f4ce42b8b58486a584.webp",
     "static/media/uc_mern.webp": "/Dgbusiness/static/media/uc_mern.b418dafa073662e3939b.webp",
     "static/media/portfolio.png": "/Dgbusiness/static/media/portfolio.f403821bb886c0fb5762.png",
     "static/media/bg.png": "/Dgbusiness/static/media/bg.1a4fc629fe0c51357c99.png",
     "static/media/datarock.png": "/Dgbusiness/static/media/datarock.38554dcb60cbfef88846.png",
     "static/media/profile.webp": "/Dgbusiness/static/media/profile.de6518316f2f2a8dfa52.webp",
+    "static/media/pulse2.png": "/Dgbusiness/static/media/pulse2.ebb413222e1dfe68876f.png",
     "static/media/barbass.png": "/Dgbusiness/static/media/barbass.fbecd9c478703569cf7c.png",
-    "static/media/pulse.png": "/Dgbusiness/static/media/pulse.760497e03e4280a1230d.png",
+    "static/media/ct.png": "/Dgbusiness/static/media/ct.d06da7e6b9a46a922300.png",
     "static/media/logo_ucv.webp": "/Dgbusiness/static/media/logo_ucv.18173db0eaba4f437865.webp",
     "static/media/telon.png": "/Dgbusiness/static/media/telon.5b1181b7fa734a06d31d.png",
     "static/media/minstock.jpg": "/Dgbusiness/static/media/minstock.5041a99a2001375400ff.jpg",
     "static/media/webdev.webp": "/Dgbusiness/static/media/webdev.121ff591092a8e066fb9.webp",
     "static/media/uc_docker.webp": "/Dgbusiness/static/media/uc_docker.783e6125bf2cb7a2a034.webp",
+    "static/media/uc_fbads.webp": "/Dgbusiness/static/media/uc_fbads.59573473de7eff390e4c.webp",
     "static/media/uc_php.webp": "/Dgbusiness/static/media/uc_php.936ec121318ff067c314.webp",
     "static/media/mobiledev.webp": "/Dgbusiness/static/media/mobiledev.85dee33985d44836932b.webp",
     "static/media/bbssLogo.png": "/Dgbusiness/static/media/bbssLogo.2a1d50ebd8176e2b9376.png",
+    "static/media/deuslink.webp": "/Dgbusiness/static/media/deuslink.b0c370803f4a5409bbe6.webp",
+    "static/media/flg.png": "/Dgbusiness/static/media/flg.a2ad9adc9b64bfb1e707.png",
     "static/media/vgdev.webp": "/Dgbusiness/static/media/vgdev.314860487960afd1539a.webp",
     "static/media/pwg.png": "/Dgbusiness/static/media/pwg.d88173208afb730addc7.png",
-    "static/media/minstock.svg": "/Dgbusiness/static/media/minstock.06b93ed160081562f7a5d883baaafe5e.svg",
-    "static/media/ct.svg": "/Dgbusiness/static/media/ct.deda4a66dc799896c862dcc54a14f4c5.svg",
+    "static/media/tag.png": "/Dgbusiness/static/media/tag.e4b1d3db340d8e7faa3b.png",
+    "static/media/meta.svg": "/Dgbusiness/static/media/meta.838c2b0229961a6ce838f5a300af9585.svg",
     "index.html": "/Dgbusiness/index.html",
     "main.18016f8d.css.map": "/Dgbusiness/static/css/main.18016f8d.css.map",
-    "main.ad5e43f6.js.map": "/Dgbusiness/static/js/main.ad5e43f6.js.map",
+    "main.e1320761.js.map": "/Dgbusiness/static/js/main.e1320761.js.map",
     "453.ace21015.chunk.js.map": "/Dgbusiness/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18016f8d.css",
-    "static/js/main.ad5e43f6.js"
+    "static/js/main.e1320761.js"
   ]
 }
