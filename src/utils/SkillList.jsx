@@ -1,4 +1,4 @@
-// import gads from "../assets/img/skills/gads.svg"
+import gads from "../assets/img/skills/gads.svg"
 import fbads from "../assets/img/skills/meta.svg"
 // import seo from "../assets/img/skills/seo.svg"
 
@@ -28,11 +28,14 @@ export const skills = {
     "Mobile Development":[
         {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg", name: "react"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg", name: "flutter"},
+        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg", name: "androidstudio"},
+        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg", name: "java"},
         // {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg", name: "kotlin"},
         // {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg", name: "swift"},
     ],
     "Videogame Development":[
         {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg", name: "cplusplus"},
+        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg", name: "ur"},
         {img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg", name: "c"},
     ],
     "DevOps and Cloud Services":[
@@ -42,6 +45,6 @@ export const skills = {
     "Digital Marketing":[
         {img: fbads, name: "facebookAds"},
         // {img: seo, name: "seo"},
-        // {img: gads, name: "googleAds"},
+        {img: gads, name: "googleAds"},
     ],
 }

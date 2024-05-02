@@ -26,7 +26,7 @@ const HeroBanner = () => {
         // {id: 1, value: "Mobile Developer"},
         // {id: 2, value: "Videogame Developer"},
         {id: 3, value: "DevOps Engineer"},
-        {id: 4, value: "Cloud Engineer"},
+        // {id: 4, value: "Cloud Engineer"},
         {id: 5, value: "Digital Marketing Specialist"},
     ]
 
