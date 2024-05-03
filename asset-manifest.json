@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/Dgbusiness/static/css/main.18016f8d.css",
-    "main.js": "/Dgbusiness/static/js/main.15e78a16.js",
+    "main.js": "/Dgbusiness/static/js/main.0e6f1205.js",
     "static/js/453.ace21015.chunk.js": "/Dgbusiness/static/js/453.ace21015.chunk.js",
     "static/media/dms.webp": "/Dgbusiness/static/media/dms.80f4ce42b8b58486a584.webp",
-    "static/media/uc_mern.webp": "/Dgbusiness/static/media/uc_mern.b418dafa073662e3939b.webp",
     "static/media/portfolio.png": "/Dgbusiness/static/media/portfolio.f403821bb886c0fb5762.png",
     "static/media/bg.png": "/Dgbusiness/static/media/bg.1a4fc629fe0c51357c99.png",
     "static/media/datarock.png": "/Dgbusiness/static/media/datarock.38554dcb60cbfef88846.png",
@@ -20,6 +19,7 @@
     "static/media/uc_fbads.webp": "/Dgbusiness/static/media/uc_fbads.59573473de7eff390e4c.webp",
     "static/media/uc_php.webp": "/Dgbusiness/static/media/uc_php.936ec121318ff067c314.webp",
     "static/media/uc_gads.webp": "/Dgbusiness/static/media/uc_gads.2406dab8fa18b71a9b8e.webp",
+    "static/media/uc_mern.webp": "/Dgbusiness/static/media/uc_mern.e2471ef07c14df62d20a.webp",
     "static/media/mobiledev.webp": "/Dgbusiness/static/media/mobiledev.85dee33985d44836932b.webp",
     "static/media/bbssLogo.png": "/Dgbusiness/static/media/bbssLogo.2a1d50ebd8176e2b9376.png",
     "static/media/deuslink.webp": "/Dgbusiness/static/media/deuslink.b0c370803f4a5409bbe6.webp",
@@ -31,11 +31,11 @@
     "static/media/gads.svg": "/Dgbusiness/static/media/gads.389c9d13f566ddef8083bcd08f7dfd88.svg",
     "index.html": "/Dgbusiness/index.html",
     "main.18016f8d.css.map": "/Dgbusiness/static/css/main.18016f8d.css.map",
-    "main.15e78a16.js.map": "/Dgbusiness/static/js/main.15e78a16.js.map",
+    "main.0e6f1205.js.map": "/Dgbusiness/static/js/main.0e6f1205.js.map",
     "453.ace21015.chunk.js.map": "/Dgbusiness/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18016f8d.css",
-    "static/js/main.15e78a16.js"
+    "static/js/main.0e6f1205.js"
   ]
 }
