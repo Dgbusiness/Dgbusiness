@@ -20,54 +20,100 @@ const SkillsComponent = (type) => {
 	))
 }
 
+const ColumnOfSkills = (values, index) => (
+	<Box
+		key={`${values[0]}-${index}`}
+		display="flex"
+		xs={12}
+		md={12}
+		sx={{
+			textAlign: { xs: 'center', sm: 'center', md: 'center' },
+			marginTop: { xs: 5, md: 0 },
+			alignItems: 'center',
+			flexWrap: 'wrap',
+			height: '100%',
+			flexDirection: 'column',
+
+		}}
+	>
+		<h1>{values[0]}</h1>
+		<Box
+			display="flex"
+			xs={12}
+			md={12}
+			sx={{
+				width: { xl: '20vw' },
+				marginTop: { xs: 5, md: 0 },
+				alignItems: 'center',
+				justifyContent: 'center',
+				flexWrap: 'wrap',
+				flexDirection: 'row',
+			}}
+			gap={3}
+		>
+			{SkillsComponent(values[1])}
+		</Box>
+	</Box>
+)
+
+var rowOfColumnsOfSkills = []
+
 const Skills = () => (
 	<Box
 		display="flex"
 		xs={12}
 		md={12}
 		sx={{
-            width: { xl: '80vw' },
+			width: { xl: '80vw' },
 			marginTop: { xs: 5, md: 0 },
-			justifyContent: 'center',
-            flexWrap: 'wrap',
+			justifyContent: {xs: 'center', md: 'space-between'},
+			flexWrap: 'wrap',
 			flexDirection: 'row',
 		}}
-        gap={4}
 	>
-		{Object.entries(skills).map(
-			(values, index) =>
+		{Object.entries(skills).map((values, index) => {
+			if (values[1].length >= 8) {
+				return (
 					<Box
-						key={`${values[0]}-${index}`}
 						display="flex"
 						xs={12}
 						md={12}
 						sx={{
-							textAlign: { xs: 'center', sm: 'center', md: 'center' },
 							marginTop: { xs: 5, md: 0 },
-							alignItems: 'center',
-							flexWrap: 'wrap',
+							justifyContent: 'center',
 							flexDirection: 'column',
 						}}
+						gap={4}
 					>
-						<h1>{values[0]}</h1>
+						{ColumnOfSkills(values, index)}
+					</Box>
+				)
+			} else {
+				rowOfColumnsOfSkills = [
+					...rowOfColumnsOfSkills,
+					ColumnOfSkills(values, index),
+				]
+				if (index % 2 == 0) {
+					let twoSkillsSet = rowOfColumnsOfSkills.slice()
+					rowOfColumnsOfSkills = []
+					return (
 						<Box
 							display="flex"
 							xs={12}
 							md={12}
 							sx={{
-                                width: { xl: '20vw' },
 								marginTop: { xs: 5, md: 0 },
-								alignItems: 'center',
 								justifyContent: 'center',
-								flexWrap: 'wrap',
-								flexDirection: 'row',
+								flexDirection: 'column',
 							}}
-							gap={3}
+							gap={4}
 						>
-							{SkillsComponent(values[1])}
+							{twoSkillsSet}
 						</Box>
-					</Box>
-		)}
+					)
+				}
+			}
+		})}
 	</Box>
 )
 
