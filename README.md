@@ -6,7 +6,7 @@ Software Engineer and Cibersecurity Consultant
 
 🖊️ With a strong background in Algorithms and Data Structures along with +5 years of experience as a Software Engineer, I have built modern web applications using PHP, Laravel, JavaScript, React, Next.js, and popular styling frameworks such as Material and Tailwind CSS. Skilled in working with various databases, including MySQL and PostgreSQL. 
 
-🛡️ I'm also passionate about Cybersecurity and Pentesting. I have expertise in the PTES method and the NIST SP 800-115 standard, as well as knowledge in Kali Linux and the different phases of Pentesting and its tools. 
+🛡️ I'm also passionate about Offensive Cybersecurity, I’ve applied PTES and NIST SP 800-115 methodologies in controlled environments, exploring real vulnerabilities with tools like Metasploit, SQLMap, and Burp Suite. I’ve practiced techniques such as service exploitation, SQL injections, XSS, CSRF, and MITM attacks. I also conduct OSINT scans with NMAP and NESSUS, and use evasion and binary modification techniques with Pesidious — all with an ethical and strategic approach.
 
 👋🏼 If you are also passionated about development and cibersecurity, let's connect.
 
