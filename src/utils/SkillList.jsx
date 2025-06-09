@@ -6,6 +6,8 @@ import metasploit from "../assets/img/skills/metasploit.svg"
 import nmap from "../assets/img/skills/nmap.svg"
 import seo from "../assets/img/skills/seo.svg"
 import powerbi from "../assets/img/skills/powerbi.svg"
+import ptes from "../assets/img/skills/ptes.png"
+import sqlmap from "../assets/img/skills/sqlmap.png"
 
 export const skills = {
     "Web Development": [
@@ -55,10 +57,10 @@ export const skills = {
     ],        
     "Cibersecurity":[
         {img: metasploit, name: "metasploit"},
-        {img: 'https://cdn.brandfetch.io/idha8gcsl6/w/807/h/417/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B', name: "sqlmap"},
+        {img: sqlmap, name: "sqlmap"},
         {img: nmap, name: "nmap"},
         {img: burpsuite, name: "burpsuite"},
-        {img: 'http://www.pentest-standard.org/images/ptes-2.png', name: "ptes"},
+        {img: ptes, name: "ptes"},
         {img: nist, name: "nist"},
     ],    
 }
