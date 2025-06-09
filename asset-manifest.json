@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dgbusiness/static/css/main.18016f8d.css",
-    "main.js": "/Dgbusiness/static/js/main.0e6f1205.js",
+    "main.js": "/Dgbusiness/static/js/main.11d6e068.js",
     "static/js/453.ace21015.chunk.js": "/Dgbusiness/static/js/453.ace21015.chunk.js",
     "static/media/dms.webp": "/Dgbusiness/static/media/dms.80f4ce42b8b58486a584.webp",
     "static/media/portfolio.png": "/Dgbusiness/static/media/portfolio.f403821bb886c0fb5762.png",
@@ -11,9 +11,12 @@
     "static/media/pulse2.png": "/Dgbusiness/static/media/pulse2.ebb413222e1dfe68876f.png",
     "static/media/barbass.png": "/Dgbusiness/static/media/barbass.fbecd9c478703569cf7c.png",
     "static/media/ct.png": "/Dgbusiness/static/media/ct.d06da7e6b9a46a922300.png",
+    "static/media/devops.webp": "/Dgbusiness/static/media/devops.6ab07811326b5a3565af.webp",
     "static/media/logo_ucv.webp": "/Dgbusiness/static/media/logo_ucv.18173db0eaba4f437865.webp",
     "static/media/telon.png": "/Dgbusiness/static/media/telon.5b1181b7fa734a06d31d.png",
+    "static/media/daxus_powerbi.webp": "/Dgbusiness/static/media/daxus_powerbi.54c1be89d6a637c26d71.webp",
     "static/media/minstock.jpg": "/Dgbusiness/static/media/minstock.5041a99a2001375400ff.jpg",
+    "static/media/itaudit.webp": "/Dgbusiness/static/media/itaudit.3a9ad55fb93a037e0935.webp",
     "static/media/webdev.webp": "/Dgbusiness/static/media/webdev.121ff591092a8e066fb9.webp",
     "static/media/uc_docker.webp": "/Dgbusiness/static/media/uc_docker.783e6125bf2cb7a2a034.webp",
     "static/media/uc_fbads.webp": "/Dgbusiness/static/media/uc_fbads.59573473de7eff390e4c.webp",
@@ -22,20 +25,27 @@
     "static/media/uc_mern.webp": "/Dgbusiness/static/media/uc_mern.e2471ef07c14df62d20a.webp",
     "static/media/mobiledev.webp": "/Dgbusiness/static/media/mobiledev.85dee33985d44836932b.webp",
     "static/media/bbssLogo.png": "/Dgbusiness/static/media/bbssLogo.2a1d50ebd8176e2b9376.png",
+    "static/media/uc_cibersecurity.webp": "/Dgbusiness/static/media/uc_cibersecurity.13fce07537bebae941fd.webp",
     "static/media/deuslink.webp": "/Dgbusiness/static/media/deuslink.b0c370803f4a5409bbe6.webp",
     "static/media/flg.png": "/Dgbusiness/static/media/flg.a2ad9adc9b64bfb1e707.png",
     "static/media/vgdev.webp": "/Dgbusiness/static/media/vgdev.314860487960afd1539a.webp",
+    "static/media/seo.svg": "/Dgbusiness/static/media/seo.9236ba38dd5dc12ac6930034bf70fe09.svg",
     "static/media/pwg.png": "/Dgbusiness/static/media/pwg.d88173208afb730addc7.png",
     "static/media/tag.png": "/Dgbusiness/static/media/tag.e4b1d3db340d8e7faa3b.png",
     "static/media/meta.svg": "/Dgbusiness/static/media/meta.838c2b0229961a6ce838f5a300af9585.svg",
+    "static/media/powerbi.svg": "/Dgbusiness/static/media/powerbi.7a4f4c21abc59e7dcad2941ebe478d49.svg",
+    "static/media/nmap.svg": "/Dgbusiness/static/media/nmap.cca8d423daf636e141fc5bf70c3603a1.svg",
+    "static/media/metasploit.svg": "/Dgbusiness/static/media/metasploit.6996366b1199b256c576d1439d4b7261.svg",
+    "static/media/nist.svg": "/Dgbusiness/static/media/nist.601fc02c94132bd12b4866cb3b4e78bb.svg",
     "static/media/gads.svg": "/Dgbusiness/static/media/gads.389c9d13f566ddef8083bcd08f7dfd88.svg",
     "index.html": "/Dgbusiness/index.html",
+    "static/media/burpsuite.svg": "/Dgbusiness/static/media/burpsuite.ff2ae348bd4a070a19253cf148208b72.svg",
     "main.18016f8d.css.map": "/Dgbusiness/static/css/main.18016f8d.css.map",
-    "main.0e6f1205.js.map": "/Dgbusiness/static/js/main.0e6f1205.js.map",
+    "main.11d6e068.js.map": "/Dgbusiness/static/js/main.11d6e068.js.map",
     "453.ace21015.chunk.js.map": "/Dgbusiness/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18016f8d.css",
-    "static/js/main.0e6f1205.js"
+    "static/js/main.11d6e068.js"
   ]
 }
