@@ -1,6 +1,11 @@
 import gads from "../assets/img/skills/gads.svg"
 import fbads from "../assets/img/skills/meta.svg"
-// import seo from "../assets/img/skills/seo.svg"
+import nist from "../assets/img/skills/nist.svg"
+import burpsuite from "../assets/img/skills/burpsuite.svg"
+import metasploit from "../assets/img/skills/metasploit.svg"
+import nmap from "../assets/img/skills/nmap.svg"
+import seo from "../assets/img/skills/seo.svg"
+import powerbi from "../assets/img/skills/powerbi.svg"
 
 export const skills = {
     "Web Development": [
@@ -42,9 +47,18 @@ export const skills = {
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", name: "docker"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg", name: "k8s"},
     ],
-    "Digital Marketing":[
+    "Digital Marketing & Analytics":[
         {img: fbads, name: "facebookAds"},
-        // {img: seo, name: "seo"},
+        {img: seo, name: "seo"},
         {img: gads, name: "googleAds"},
-    ],
+        {img: powerbi, name: "poserBi"},
+    ],        
+    "Cibersecurity":[
+        {img: metasploit, name: "metasploit"},
+        {img: 'https://cdn.brandfetch.io/idha8gcsl6/w/807/h/417/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B', name: "sqlmap"},
+        {img: nmap, name: "nmap"},
+        {img: burpsuite, name: "burpsuite"},
+        {img: 'http://www.pentest-standard.org/images/ptes-2.png', name: "ptes"},
+        {img: nist, name: "nist"},
+    ],    
 }

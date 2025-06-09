@@ -4,7 +4,7 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Software Engineer and Cibersecurity Consultant
 ----------------------------------------------
 
-🖊️ With a strong background in Algorithms and Data Structures along with +5 years of experience as a Software Engineer, I have built modern web applications using PHP, Laravel, JavaScript, React, Next.js, and popular styling frameworks such as Material and Tailwind CSS. Skilled in working with various databases, including MySQL and PostgreSQL. 
+🖊️ With a strong background in Algorithms and Data Structures along with +8 years of experience as a Software Engineer, I have built modern web applications using PHP, Laravel, JavaScript, React, Next.js, and popular styling frameworks such as Material and Tailwind CSS. Skilled in working with various databases, including MySQL and PostgreSQL. 
 
 🛡️ I'm also passionate about Offensive Cybersecurity, I’ve applied PTES and NIST SP 800-115 methodologies in controlled environments, exploring real vulnerabilities with tools like Metasploit, SQLMap, and Burp Suite. I’ve practiced techniques such as service exploitation, SQL injections, XSS, CSRF, and MITM attacks. I also conduct OSINT scans with NMAP and NESSUS, and use evasion and binary modification techniques with Pesidious — all with an ethical and strategic approach.
 
@@ -30,8 +30,6 @@ Software Engineer and Cibersecurity Consultant
 <a href="https://linkedin.com/in/dgbusiness" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dgbusiness" height="30" width="40" /></a>
 <a href="https://www.leetcode.com/dgbusiness" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="dgbusiness" height="30" width="40" /></a>
 </p>
-
-<p><img align="" src="https://github-readme-stats.vercel.app/api/top-langs?username=dgbusiness&show_icons=true&locale=en&layout=compact&langs_count=5&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true" alt="dgbusiness" /></p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=dgbusiness&theme=onestar&row=1&column=6" alt="dgbusiness" /></a> </p>
 

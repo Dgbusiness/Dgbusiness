@@ -75,6 +75,7 @@ const Skills = () => (
 			if (values[1].length >= 8) {
 				return (
 					<Box
+						key={`${values[0]}-${index}`}
 						display="flex"
 						xs={12}
 						md={12}
@@ -93,11 +94,12 @@ const Skills = () => (
 					...rowOfColumnsOfSkills,
 					ColumnOfSkills(values, index),
 				]
-				if (index % 2 == 0) {
+				if (index % 2 === 0) {
 					let twoSkillsSet = rowOfColumnsOfSkills.slice()
 					rowOfColumnsOfSkills = []
 					return (
 						<Box
+							key={`${values[0]}-${index}`}
 							display="flex"
 							xs={12}
 							md={12}
@@ -113,6 +115,7 @@ const Skills = () => (
 					)
 				}
 			}
+			return null
 		})}
 	</Box>
 )

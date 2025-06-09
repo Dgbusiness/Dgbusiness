@@ -65,12 +65,10 @@ const AboutLayout = () => {
 					color="white"
 					fontFamily="sans-serif"
 				>
-					Since the beginning of my work experience more than 4 years ago I have
-					had the opportunity to work remotely with several national and
-					international companies as a Full Stack Web Developer. I am always
-					innovating my knowledge since there are many areas that I am
-					passionate about, very responsible, punctual and looking for new
-					professional challenges to complete.
+					With a strong background in Algorithms and Data Structures along with +8 years of experience as a Software Engineer, I have built modern web applications using PHP, Laravel, JavaScript, React, Next.js, and popular styling frameworks such as Material and Tailwind CSS. Skilled in working with various databases, including MySQL and PostgreSQL. 
+					<br />
+					<br />
+					I'm also passionate about Offensive Cybersecurity, I’ve applied PTES and NIST SP 800-115 methodologies in controlled environments, exploring real vulnerabilities with tools like Metasploit, SQLMap, and Burp Suite. I’ve practiced techniques such as service exploitation, SQL injections, XSS, CSRF, and MITM attacks. I also conduct OSINT scans with NMAP and NESSUS, and use evasion and binary modification techniques with Pesidious — all with an ethical and strategic approach.
 				</Typography>
 			</Box>
 			<Box

@@ -33,7 +33,7 @@ const Certificates = ({ openInNewTab }) =>
                             mt: 5
 						},
 					}}
-					onClick={() => openInNewTab(certificate.url)}
+					onClick={() => certificate.url !== '#' ? openInNewTab(certificate.url) : null}
 				>
 					<Box display="flex" textAlign="center">
 						<Box 

@@ -129,7 +129,7 @@ const Navbar = () => {
                         variant="h4"
                         noWrap
                         component="a"
-                        href=""
+                        href="#back-to-top-anchor"
                         sx={{
                             display: { xs: 'flex', md: 'none' },
                             fontFamily: 'Roboto',
@@ -147,7 +147,7 @@ const Navbar = () => {
                 <Typography
                     variant="h3"
                     component="a"
-                    href="/"
+                    href="#back-to-top-anchor"
                     sx={{
                         mr: 2,
                         display: { xs: 'none', md: 'flex' },

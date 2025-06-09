@@ -67,10 +67,10 @@ const ServicesLayout = () => {
                     </Typography>
                     {(hover && cardSelected === index) && (
                         <>
-                            <Typography sx={{ display: {xs: 'block', sm: 'none'}}} variant="h6" color="text.secondary">
+                            <Typography sx={{ display: {xs: 'block', sm: 'none'}}} variant="body1" color="text.secondary">
                                 {service.description}
                             </Typography>
-                            <Typography sx={{ display: {xs: 'none', sm: 'block'}}} variant="h5" color="text.secondary">
+                            <Typography sx={{ display: {xs: 'none', sm: 'block'}}} variant="body1" color="text.secondary">
                                 {service.description}
                             </Typography>
                         </>

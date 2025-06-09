@@ -5,9 +5,9 @@ import barbass from '../assets/img/barbass.png'
 import portfolio from '../assets/img/portfolio.png'
 
 export const projects = [
-    {name: 'Min\'Stock', type: 'E-commerce', topTools: 'Laravel', tools: 'Laravel, JQuery, HTML5, CSS3, Bootstrap', url: 'https://minstocks.com', img: minstock},
+    {name: 'Min\'Stock', type: 'E-commerce', topTools: 'Laravel', tools: 'Laravel, JQuery, HTML5, CSS3, Bootstrap', url: 'https://github.com/Dgbusiness/minstock-online-store', img: minstock},
+    {name: 'Datarock', type: 'Web Aplication', topTools: 'Laravel', tools: 'Laravel, JQuery, HTML5, CSS3, Bootstrap', url: 'https://github.com/Dgbusiness/crops-management-platform', img: datarock},
     {name: 'Telón de Arena', type: 'Module/Plugin', topTools: 'Drupal', tools: 'Drupal', url: 'https://www.telondearena.org/', img: telon},
-    {name: 'Datarock', type: 'Web Aplication', topTools: 'Laravel', tools: 'Laravel, JQuery, HTML5, CSS3, Bootstrap', url: 'https://www.datarock.com.co/', img: datarock},
     {name: 'Barbas\'S', type: 'Web Catalog and Blog', topTools: 'Wordpress', tools: 'Wordpress', url: 'https://barbassoficial.com/', img: barbass},
     {name: 'Portfolio', type: 'Single Web Application', topTools: 'React', tools: 'React, Material UI', url: 'https://dgbusiness.github.io/Dgbusiness/', img: portfolio},
 ]
