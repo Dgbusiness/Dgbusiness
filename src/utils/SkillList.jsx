@@ -55,7 +55,7 @@ export const skills = {
         {img: gads, name: "googleAds"},
         {img: powerbi, name: "poserBi"},
     ],        
-    "Cibersecurity":[
+    "Cybersecurity":[
         {img: metasploit, name: "metasploit"},
         {img: sqlmap, name: "sqlmap"},
         {img: nmap, name: "nmap"},
