@@ -5,6 +5,7 @@ const nextConfig = {
   images: { unoptimized: true },
   basePath: '/Dgbusiness',
   assetPrefix: '/Dgbusiness/',
+  env: { NEXT_PUBLIC_BASE_PATH: '/Dgbusiness' },
 };
 
 export default nextConfig;

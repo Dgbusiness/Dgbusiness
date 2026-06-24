@@ -24,8 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export const metadata: Metadata = {
   title: 'Daniel Giannotti — Full-Stack Software Engineer',
+  icons: { icon: `${BASE}/favicon.ico` },
   description:
     '8+ años construyendo y escalando aplicaciones web, de la API al frontend. React, Next.js, Node.js, Laravel.',
   openGraph: {

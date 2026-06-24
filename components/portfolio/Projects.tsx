@@ -60,7 +60,7 @@ export default function Projects() {
             }}
           >
             <Image
-              src="/churupos.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/churupos.png`}
               alt="Churupos dashboard"
               fill
               style={{ objectFit: 'cover', objectPosition: 'top left' }}
