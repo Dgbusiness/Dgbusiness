@@ -35,6 +35,13 @@ export const metadata: Metadata = {
     siteName: 'Daniel Giannotti',
     locale: 'es_AR',
     type: 'website',
+    images: [{ url: 'https://dgbusiness.github.io/Dgbusiness/og.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Daniel Giannotti — Full-Stack Software Engineer',
+    description: '8+ años construyendo aplicaciones web escalables.',
+    images: ['https://dgbusiness.github.io/Dgbusiness/og.png'],
   },
 };
 
