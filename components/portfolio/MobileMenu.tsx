@@ -48,7 +48,7 @@ export default function MobileMenu({ open, onClose }: Props) {
         className="flex flex-col gap-4 pt-8 mt-8"
         style={{ borderTop: '1px solid color-mix(in oklab, var(--d-text) 10%, var(--d-bg))' }}
       >
-        <div className="flex gap-[10px]">
+        <div className="flex gap-[10px] justify-center">
           <div
             className="flex gap-[3px] p-[3px] rounded-full"
             style={{ border: '1px solid color-mix(in oklab, var(--d-text) 18%, var(--d-bg))' }}

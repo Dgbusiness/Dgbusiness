@@ -47,7 +47,7 @@ export default function Contact() {
 
       {/* Footer — full width */}
       <div
-        className="w-full px-10 mob:px-[22px] xs:px-4 pt-[30px] mt-20 flex justify-between items-center flex-wrap gap-[14px] text-sm"
+        className="w-full px-10 mob:px-[22px] xs:px-4 pt-[30px] mt-20 flex justify-between items-center flex-wrap gap-[14px] text-sm ham:flex-col ham:items-center ham:text-center"
         style={{
           borderTop: '1px solid color-mix(in oklab, var(--d-ondark) 22%, var(--d-dark))',
           color: 'color-mix(in oklab, var(--d-ondark) 50%, var(--d-dark))',
