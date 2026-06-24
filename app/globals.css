@@ -1,3 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-d-bg:      var(--d-bg);
+  --color-d-surface: var(--d-surface);
+  --color-d-text:    var(--d-text);
+  --color-d-accent:  var(--d-accent);
+  --color-d-accenth: var(--d-accenth);
+  --color-d-dark:    var(--d-dark);
+  --color-d-onaccent: var(--d-onaccent);
+  --color-d-ondark:  var(--d-ondark);
+  --font-sg: var(--font-space), 'Space Grotesk', sans-serif;
+  --font-jb: var(--font-mono), 'JetBrains Mono', monospace;
+}
+
+@custom-variant ham { @media (max-width: 430px) { @slot; } }
+@custom-variant mob { @media (max-width: 860px) { @slot; } }
+@custom-variant sm2 { @media (max-width: 520px) { @slot; } }
+@custom-variant xs  { @media (max-width: 360px) { @slot; } }
+
 /* ── Niebla defaults (avoid FOUC before JS sets vars) ── */
 :root {
   --d-bg:       #eceef0;
@@ -26,37 +46,17 @@ body {
 
 ::selection { background: var(--d-accent); color: var(--d-onaccent); }
 
-/* ── Reveal animation ── */
 [data-reveal] {
   opacity: 0;
   transform: translateY(22px);
 }
 
-/* ── Marquee ── */
 @keyframes marqueeC {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* ── Status dot blink ── */
 @keyframes blink {
   0%, 49%  { opacity: 1; }
   50%, 100% { opacity: 0; }
-}
-
-/* ── Transitions for theme switch ── */
-section, div[style*="background:var(--d"] {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-}
-
-/* ── Responsive ── */
-@media (max-width: 860px) {
-  .grid-2col  { grid-template-columns: 1fr !important; gap: 28px !important; }
-  .grid-05-2  { grid-template-columns: 1fr !important; }
-  .hero-h1    { font-size: clamp(48px, 16vw, 80px) !important; }
-  .pad-40     { padding-left: 22px !important; padding-right: 22px !important; }
-}
-
-@media (max-width: 520px) {
-  .hero-h1 { font-size: clamp(40px, 18vw, 72px) !important; }
 }
