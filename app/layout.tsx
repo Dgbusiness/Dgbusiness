@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: '8+ años construyendo aplicaciones web escalables.',
     url: 'https://dgbusiness.github.io/Dgbusiness/',
     siteName: 'Daniel Giannotti',
-    locale: 'es_AR',
+    locale: 'es_VE',
     type: 'website',
     images: [{ url: 'https://dgbusiness.github.io/Dgbusiness/og.png', width: 1200, height: 630 }],
   },
