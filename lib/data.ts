@@ -7,7 +7,7 @@ export interface Service    { n: string; title: string; desc: string }
 export function getData(lang: Lang) {
   const es = lang === 'es';
   return {
-    year:          es ? 'Portafolio — 2026' : 'Portfolio — 2026',
+    year:          es ? 'Portafolio' : 'Portfolio',
     status:        es ? 'Disponible para nuevos proyectos' : 'Available for new projects',
     modeLight:     es ? 'Claro' : 'Light',
     modeDark:      es ? 'Oscuro' : 'Dark',
